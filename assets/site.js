@@ -143,6 +143,9 @@ const brands = [
       "Food solutions and specialized packaging"
     ),
     marqueeSector: text("Food solutions", "Food solutions"),
+    logo: "logos/pack-gourmet.svg",
+    marqueeBg: "#ffe1e2",
+    marqueeText: "#171c21",
     marqueeDescription: text(
       "Packaging especializado para terceros y líneas propias con foco en presentación.",
       "Specialized packaging for third parties and in-house lines with a presentation-first approach."
@@ -180,6 +183,9 @@ const brands = [
       "Self-service and ATM operations"
     ),
     marqueeSector: text("Autoservicio", "Self-service"),
+    logo: "logos/efectivo-365.svg",
+    marqueeBg: "#2a4fa1",
+    marqueeText: "#ffffff",
     marqueeDescription: text(
       "Comercialización, instalación, mantenimiento y operación de cajeros extra bancarios.",
       "Commercialization, installation, maintenance and operation of off-bank ATMs."
@@ -217,6 +223,9 @@ const brands = [
       "Design and equipment for vessels"
     ),
     marqueeSector: text("Náutica", "Nautical"),
+    logo: "logos/nautik.svg",
+    marqueeBg: "#101914",
+    marqueeText: "#93cf08",
     marqueeDescription: text(
       "Diseño, restyling y piezas especiales para embarcaciones y marinas premium.",
       "Design, restyling and special parts for premium boats and marinas."
@@ -859,8 +868,8 @@ const pageTranslations = {
     meta: {
       title: text("DP Industria Publicitaria | Grupo DP", "DP Industria Publicitaria | Grupo DP"),
       description: text(
-        "DP Industria Publicitaria desarrolla soluciones integrales de identidad, exhibición y espacios comerciales.",
-        "DP Industria Publicitaria develops end-to-end identity, display and commercial-space solutions."
+        "DP Industria Publicitaria diseña, desarrolla, produce y coordina la logística de materiales para comunicación visual en todo el país.",
+        "DP Industria Publicitaria designs, develops, produces and coordinates logistics for visual communication materials throughout the country."
       )
     },
     texts: [
@@ -868,69 +877,72 @@ const pageTranslations = {
       { selector: "main > section:nth-of-type(1) .eyebrow", value: text("Unidad de negocio", "Business unit") },
       {
         selector: "main > section:nth-of-type(1) h1",
-        value: text("Identidad, exhibición y espacios comerciales.", "Identity, display and commercial spaces.")
+        value: text("Comunicación visual de punta a punta.", "End-to-end visual communication.")
       },
       {
         selector: "main > section:nth-of-type(1) .lead",
         value: text(
-          "DP Industria Publicitaria trabaja junto a empresas e instituciones en el desarrollo de piezas, soportes y proyectos que combinan diseño, producción e implementación.",
-          "DP Industria Publicitaria works with companies and institutions on pieces, structures and projects that combine design, production and implementation."
+          "DP Industria Publicitaria se especializa en el diseño, desarrollo, producción y logística de materiales para la comunicación visual.",
+          "DP Industria Publicitaria specializes in the design, development, production and logistics of visual communication materials."
         )
       },
       {
         selector: "main > section:nth-of-type(1) .tag",
         all: true,
         value: text(
-          ["Imagen institucional", "Retail y banking", "Stands y exhibidores", "Obras integrales"],
-          ["Institutional identity", "Retail and banking", "Stands and displays", "Integrated works"]
+          ["Imagen institucional", "Support banking", "Tótems y exhibidores", "Obras integrales"],
+          ["Institutional identity", "Banking support", "Totems and displays", "Integrated works"]
         )
       },
       {
         selector: "main > section:nth-of-type(1) .placeholder-media strong",
-        value: text("Proyecto destacado", "Featured project")
+        value: text("Comunicación visual aplicada", "Applied visual communication")
       },
       {
         selector: "main > section:nth-of-type(1) .placeholder-media span",
         value: text(
-          "Stand, fachada, interior comercial o instalación institucional.",
-          "Stand, facade, commercial interior or institutional installation."
+          "Fachadas, stands, exhibidores, letras corpóreas y piezas institucionales.",
+          "Facades, stands, displays, dimensional lettering and institutional pieces."
         )
       },
       { selector: "main > section:nth-of-type(2) .eyebrow", value: text("Qué hacemos", "What we do") },
       {
         selector: "main > section:nth-of-type(2) h2",
-        value: text("Experiencias visuales en el espacio.", "Visual experiences in space.")
+        value: text(
+          "Diseño, producción y logística para cada campaña.",
+          "Design, production and logistics for every campaign."
+        )
       },
       {
         selector: "main > section:nth-of-type(2) > .container > .split-layout > div:first-child p",
         all: true,
         value: text(
           [
-            "La unidad reúne experiencia en gráfica, diseño industrial y ejecución para proyectos donde la presencia visual debe expresarse con claridad, escala y calidad de terminación.",
-            "Su campo de acción va desde piezas puntuales hasta desarrollos llave en mano para entornos comerciales, institucionales y de exhibición."
+            "La unidad contempla todos los aspectos del proyecto: desde su creación y desarrollo conceptual hasta la elección de los materiales más convenientes, su elaboración y la colocación final.",
+            "Su equipo combina experiencia, capacitación e investigación permanente para adaptar recursos y servicios a las necesidades de cada mercado, campaña y punto de instalación."
           ],
           [
-            "The unit brings together experience in graphics, industrial design and execution for projects where visual presence must be expressed with clarity, scale and finishing quality.",
-            "Its scope ranges from specific pieces to turnkey developments for commercial, institutional and display environments."
+            "The unit covers every part of the project: from creation and conceptual development to choosing the most suitable materials, producing them and completing final installation.",
+            "Its team combines experience, training and continuous research to adapt resources and services to each market, campaign and installation point."
           ]
         )
       },
-      { selector: "main > section:nth-of-type(2) .panel h3", value: text("Áreas de trabajo", "Work areas") },
+      { selector: "main > section:nth-of-type(2) .panel h3", value: text("Servicios principales", "Main services") },
       {
         selector: "main > section:nth-of-type(2) .list-clean li",
         all: true,
         value: text(
           [
-            "Imagen institucional y ambientación comercial.",
-            "Soluciones para retail, banking y espacios de atención.",
-            "Diseño gráfico e industrial aplicado a soportes y estructuras.",
-            "Fabricación, montaje y puesta en marcha de proyectos integrales."
+            "Imagen institucional, gráfica y decoración comercial.",
+            "Support banking y soluciones para espacios de atención.",
+            "Corte y grabado láser, letras corpóreas y piezas especiales.",
+            "Obras llave en mano con logística y colocación en todo el país."
           ],
           [
-            "Institutional identity and commercial setting.",
-            "Solutions for retail, banking and service spaces.",
-            "Graphic and industrial design applied to supports and structures.",
-            "Manufacturing, installation and launch of integrated projects."
+            "Institutional identity, graphics and commercial decoration.",
+            "Banking support and solutions for service spaces.",
+            "Laser cutting and engraving, dimensional lettering and special pieces.",
+            "Turnkey works with logistics and installation throughout the country."
           ]
         )
       },
@@ -943,8 +955,8 @@ const pageTranslations = {
         selector: "main > section:nth-of-type(3) .service-grid h3",
         all: true,
         value: text(
-          ["Imagen institucional", "Stands y exhibidores", "Gráfica y ambientación", "Corte láser y letras corpóreas", "Diseño industrial", "Obras llave en mano"],
-          ["Institutional identity", "Stands and displays", "Graphics and spatial styling", "Laser cutting and dimensional lettering", "Industrial design", "Turnkey works"]
+          ["Imagen institucional", "Support banking", "Gráfica y decoración comercial", "Corte y grabado láser", "Letras corpóreas", "Obras llave en mano"],
+          ["Institutional identity", "Banking support", "Graphics and commercial decoration", "Laser cutting and engraving", "Dimensional lettering", "Turnkey works"]
         )
       },
       {
@@ -953,18 +965,18 @@ const pageTranslations = {
         value: text(
           [
             "Desarrollo visual para fachadas, interiores y puntos de contacto.",
-            "Espacios pensados para exhibir, ordenar y generar una experiencia más sólida.",
+            "Soluciones visuales y funcionales para espacios de atención y operación bancaria.",
             "Aplicaciones gráficas que acompañan recorridos, campañas y entornos comerciales.",
-            "Piezas de precisión y volumen para señalización, identidad y presencia institucional.",
-            "Soluciones funcionales y visuales desarrolladas con criterio productivo.",
+            "Piezas de precisión para señalización, identidad y terminaciones especiales.",
+            "Volumen, presencia y lectura clara para fachadas, interiores y puntos de contacto.",
             "Gestión integral desde el relevamiento inicial hasta la entrega final."
           ],
           [
             "Visual development for facades, interiors and customer touchpoints.",
-            "Spaces designed to display, organize and create a stronger experience.",
+            "Visual and functional solutions for banking service and operation spaces.",
             "Graphic applications that support journeys, campaigns and commercial environments.",
-            "Precision and dimensional pieces for signage, identity and institutional presence.",
-            "Functional and visual solutions developed with production judgment.",
+            "Precision pieces for signage, identity and special finishes.",
+            "Volume, presence and clear readability for facades, interiors and touchpoints.",
             "End-to-end management from the first survey to final delivery."
           ]
         )
@@ -972,26 +984,32 @@ const pageTranslations = {
       { selector: "main > section:nth-of-type(4) .eyebrow", value: text("Proyectos", "Projects") },
       {
         selector: "main > section:nth-of-type(4) h2",
-        value: text("Proyectos pensados para hacerse visibles.", "Projects designed to become visible.")
+        value: text(
+          "Recursos preparados para hacerse visibles.",
+          "Resources prepared to become visible."
+        )
       },
       {
         selector: "main > section:nth-of-type(4) .media-grid strong",
         all: true,
-        value: text(["Espacios comerciales", "Stands y exhibición", "Piezas especiales"], ["Commercial spaces", "Stands and display", "Special pieces"])
+        value: text(
+          ["Proceso productivo", "Tótems y exhibidores", "Stands y equipamiento"],
+          ["Production process", "Totems and displays", "Stands and equipment"]
+        )
       },
       {
         selector: "main > section:nth-of-type(4) .media-grid span",
         all: true,
         value: text(
           [
-            "Locales, fachadas, interiores y señalización institucional.",
-            "Ferias, activaciones y soportes para producto.",
-            "Letras corpóreas, corte láser y soluciones de detalle."
+            "Creación, materiales, elaboración, logística y colocación.",
+            "Soportes para ordenar, destacar y presentar productos o servicios.",
+            "Diseño gráfico e industrial aplicado con tecnología y equipamiento propio."
           ],
           [
-            "Stores, facades, interiors and institutional signage.",
-            "Trade fairs, activations and product supports.",
-            "Dimensional lettering, laser cutting and detail-driven solutions."
+            "Creation, materials, production, logistics and installation.",
+            "Supports to organize, highlight and present products or services.",
+            "Graphic and industrial design applied with in-house technology and equipment."
           ]
         )
       }
@@ -1802,6 +1820,18 @@ const href = (path) => {
   return resolved.includes("?") ? `${resolved}&lang=en` : `${resolved}?lang=en`;
 };
 
+const assetHref = (path) => {
+  if (!path) {
+    return path;
+  }
+
+  if (path.startsWith("http://") || path.startsWith("https://")) {
+    return path;
+  }
+
+  return `${base}${path}`;
+};
+
 const isCurrent = (slug) => (page === slug ? "is-current" : "");
 const isCurrentSection = (section) =>
   navSections[page] === section ? "is-current-section" : "";
@@ -2116,18 +2146,33 @@ const renderHomeMarquee = () => {
 
   const tileMarkup = (duplicate = false) =>
     brands
-      .map(
-        (brand) => `
+      .map((brand) => {
+        const tileStyle = [
+          brand.marqueeBg ? `--brand-surface: ${brand.marqueeBg}` : "",
+          brand.marqueeText ? `--brand-ink: ${brand.marqueeText}` : ""
+        ]
+          .filter(Boolean)
+          .join("; ");
+        const logoMarkup = brand.logo
+          ? `
+            <span class="logo-pill__media">
+              <img class="logo-pill__image" src="${assetHref(brand.logo)}" alt="${brand.label}" loading="lazy" />
+            </span>
+          `
+          : `<strong class="logo-pill__title">${brand.label}</strong>`;
+
+        return `
           <a
-            class="logo-pill"
+            class="logo-pill ${brand.logo ? "logo-pill--image" : ""}"
             href="${href(brand.path)}"
+            ${tileStyle ? `style="${tileStyle}"` : ""}
             ${duplicate ? 'aria-hidden="true" tabindex="-1"' : ""}
           >
             <span class="logo-pill__sector">${getCopy(brand.marqueeSector)}</span>
-            <strong class="logo-pill__title">${brand.label}</strong>
+            ${logoMarkup}
           </a>
-        `
-      )
+        `;
+      })
       .join("");
 
   track.innerHTML = `

@@ -380,6 +380,21 @@ main {
   min-height: 540px;
 }
 
+.institutional-photo {
+  position: relative;
+  margin: 0;
+  height: clamp(420px, 58vh, 620px);
+  overflow: hidden;
+  background: #cbd3da;
+}
+
+.institutional-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .hero-card,
 .panel,
 .card,
@@ -741,23 +756,33 @@ p {
   border: 0;
   border-right: 1px solid rgba(23, 28, 33, 0.1);
   border-radius: 0;
-  background: transparent;
-  color: var(--paper);
+  background: var(--brand-surface, transparent);
+  color: var(--brand-ink, var(--paper));
   text-align: left;
   transition: color 180ms ease, background 180ms ease;
 }
 
 .logo-pill:hover {
-  background: rgba(23, 28, 33, 0.045);
+  background:
+    linear-gradient(0deg, rgba(23, 28, 33, 0.055), rgba(23, 28, 33, 0.055)),
+    var(--brand-surface, rgba(23, 28, 33, 0.045));
   box-shadow: none;
 }
 
+.logo-pill--image {
+  align-items: center;
+  min-width: 270px;
+  padding-inline: 1.35rem;
+  text-align: center;
+}
+
 .logo-pill__sector {
-  color: var(--green);
+  color: var(--brand-ink, var(--green));
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
+  opacity: 0.76;
 }
 
 .logo-pill__title {
@@ -765,6 +790,19 @@ p {
   font-size: 1.12rem;
   line-height: 1.2;
   letter-spacing: -0.035em;
+}
+
+.logo-pill__media {
+  width: 100%;
+  height: 64px;
+  display: grid;
+  place-items: center;
+}
+
+.logo-pill__image {
+  width: min(100%, 200px);
+  max-height: 64px;
+  object-fit: contain;
 }
 
 @keyframes marquee-scroll {
@@ -1108,6 +1146,10 @@ p {
     min-height: 360px;
   }
 
+  .institutional-photo {
+    height: 420px;
+  }
+
   .page-hero h1,
   .hero-card h1,
   .home-hero__title,
@@ -1302,6 +1344,11 @@ p {
     min-height: 340px;
   }
 
+  .institutional-photo {
+    height: 340px;
+    min-height: 0;
+  }
+
   .placeholder-media--tall,
   .placeholder-media {
     min-height: 260px;
@@ -1417,6 +1464,10 @@ p {
   .placeholder-media--wide {
     min-height: 220px;
     padding: 1.3rem 1.2rem;
+  }
+
+  .institutional-photo {
+    height: 280px;
   }
 
   .footer-grid {
