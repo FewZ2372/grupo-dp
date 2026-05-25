@@ -43,21 +43,21 @@ const brands = [
     label: "DP Industria Publicitaria",
     unitMeta: [
       {
-        value: text("Retail + Banking", "Retail + Banking"),
+        value: text("Retail y bancos", "Retail + Banking"),
         label: text(
           "Aplicaciones para puntos de contacto, exhibición y atención.",
           "Applications for customer-facing, display and service environments."
         )
       },
       {
-        value: text("Turnkey", "Turnkey"),
+        value: text("Llave en mano", "Turnkey"),
         label: text(
           "Diseño, fabricación y montaje dentro de un mismo recorrido.",
           "Design, fabrication and installation within the same project flow."
         )
       },
       {
-        value: text("Laser + Signage", "Laser + Signage"),
+        value: text("Láser + señalética", "Laser + Signage"),
         label: text(
           "Corte, letras corporeas y piezas especiales de terminación.",
           "Cutting, dimensional lettering and special finishing pieces."
@@ -80,7 +80,7 @@ const brands = [
     label: "COMEX",
     unitMeta: [
       {
-        value: text("Import / Export", "Import / Export"),
+        value: text("Importación / Exportación", "Import / Export"),
         label: text(
           "Operaciones internacionales leidas con criterio comercial y operativo.",
           "International operations managed with commercial and operational judgment."
@@ -94,7 +94,7 @@ const brands = [
         )
       },
       {
-        value: text("Docs + Logistics", "Docs + Logistics"),
+        value: text("Documentación + logística", "Docs + Logistics"),
         label: text(
           "Coordinacion documental, administrativa y logística.",
           "Document, administrative and logistics coordination."
@@ -117,21 +117,21 @@ const brands = [
     label: "Pack Gourmet",
     unitMeta: [
       {
-        value: text("B2B Packaging", "B2B Packaging"),
+        value: text("Packaging B2B", "B2B Packaging"),
         label: text(
           "Trae tu producto y lo envasamos con una presentación más visible.",
           "Bring your product and we package it with a more visible presentation."
         )
       },
       {
-        value: text("Own Lines", "Own Lines"),
+        value: text("Líneas propias", "Own Lines"),
         label: text(
           "Espacio abierto para marcas y desarrollos propios.",
           "Open ground for in-house brands and product developments."
         )
       },
       {
-        value: text("Shelf Impact", "Shelf Impact"),
+        value: text("Impacto en góndola", "Shelf Impact"),
         label: text(
           "Formato sellado, exhibible y adaptable a distintos contenidos.",
           "A sealed, display-ready format adaptable to different contents."
@@ -139,10 +139,10 @@ const brands = [
       }
     ],
     navDescription: text(
-      "Food solutions y packaging especializado",
+      "Soluciones alimentarias y packaging especializado",
       "Food solutions and specialized packaging"
     ),
-    marqueeSector: text("Food solutions", "Food solutions"),
+    marqueeSector: text("Soluciones alimentarias", "Food solutions"),
     logo: "logos/pack-gourmet.svg",
     marqueeBg: "#ffe1e2",
     marqueeText: "#171c21",
@@ -157,21 +157,21 @@ const brands = [
     label: "Efectivo 365",
     unitMeta: [
       {
-        value: text("ATM Network", "ATM Network"),
+        value: text("Red de cajeros", "ATM Network"),
         label: text(
           "Compra, venta, consignación y despliegue de equipos.",
           "Purchase, sale, consignment and rollout of ATM units."
         )
       },
       {
-        value: text("Monitoring", "Monitoring"),
+        value: text("Monitoreo", "Monitoring"),
         label: text(
           "Software, soporte técnico y continuidad operativa.",
           "Software, technical support and operational continuity."
         )
       },
       {
-        value: text("Field Service", "Field Service"),
+        value: text("Servicio en campo", "Field Service"),
         label: text(
           "Instalación, logística y mantenimiento en campo.",
           "Installation, logistics and on-site maintenance."
@@ -197,14 +197,14 @@ const brands = [
     label: "Nautik",
     unitMeta: [
       {
-        value: text("Premium Marine", "Premium Marine"),
+        value: text("Náutica premium", "Premium Marine"),
         label: text(
           "Lenguaje cuidado para embarcaciones, cubiertas y marinas.",
           "Refined language for boats, decks and marina environments."
         )
       },
       {
-        value: text("Custom Pieces", "Custom Pieces"),
+        value: text("Piezas a medida", "Custom Pieces"),
         label: text(
           "Tableros, puertas, divisiones y accesorios a medida.",
           "Custom panels, doors, partitions and onboard accessories."
@@ -237,21 +237,21 @@ const brands = [
     label: "Power Station",
     unitMeta: [
       {
-        value: text("Charging Tower", "Charging Tower"),
+        value: text("Torre de carga", "Charging Tower"),
         label: text(
           "Producto insignia para espacios de alto tránsito.",
           "Flagship product for high-traffic environments."
         )
       },
       {
-        value: text("Flexible Use", "Flexible Use"),
+        value: text("Uso flexible", "Flexible Use"),
         label: text(
           "Ferias, retail, corporativo y áreas de espera.",
           "Fairs, retail, corporate spaces and waiting areas."
         )
       },
       {
-        value: text("Technical Base", "Technical Base"),
+        value: text("Base técnica", "Technical Base"),
         label: text(
           "Marca preparada para evolucionar desde un equipo concreto.",
           "A brand ready to evolve from one concrete technical product."
@@ -262,7 +262,7 @@ const brands = [
       "Estaciones de carga para espacios de alto tránsito",
       "Charging stations for high-traffic spaces"
     ),
-    marqueeSector: text("Charging solutions", "Charging solutions"),
+    marqueeSector: text("Soluciones de carga", "Charging solutions"),
     marqueeDescription: text(
       "Torres de carga para celulares pensadas para servicio, utilidad y presencia.",
       "Cell-phone charging towers built for service, utility and presence."
@@ -500,7 +500,7 @@ const pageTranslations = {
           [
             "Espacios, exhibición e identidad visual aplicada a entornos comerciales e institucionales.",
             "Comercio exterior con enfoque operativo y articulación entre mercados estratégicos.",
-            "Food solutions y packaging especializado con fuerte valor de presentación.",
+            "Soluciones alimentarias y packaging especializado con fuerte valor de presentación.",
             "Autoservicio, continuidad operativa y soluciones para cajeros extra bancarios.",
             "Diseño y equipamiento con sensibilidad premium para el entorno náutico.",
             "Estaciones de carga pensadas para sumar servicio y presencia en espacios de uso intensivo."
@@ -857,7 +857,7 @@ const pageTranslations = {
         selector: "main > section:nth-of-type(3) .contact-grid h3",
         all: true,
         value: text(
-          ["Industria y exhibición", "Comercio exterior", "Food solutions", "Autoservicio", "Náutica", "Carga y energía"],
+          ["Industria y exhibición", "Comercio exterior", "Soluciones alimentarias", "Autoservicio", "Náutica", "Carga y energía"],
           ["Industry and display", "Foreign trade", "Food solutions", "Self-service", "Nautical", "Charging and energy"]
         )
       },
@@ -890,7 +890,7 @@ const pageTranslations = {
         selector: "main > section:nth-of-type(1) .tag",
         all: true,
         value: text(
-          ["Imagen institucional", "Support banking", "Tótems y exhibidores", "Obras integrales"],
+          ["Imagen institucional", "Soporte bancario", "Tótems y exhibidores", "Obras integrales"],
           ["Institutional identity", "Banking support", "Totems and displays", "Integrated works"]
         )
       },
@@ -934,7 +934,7 @@ const pageTranslations = {
         value: text(
           [
             "Imagen institucional, gráfica y decoración comercial.",
-            "Support banking y soluciones para espacios de atención.",
+            "Soporte bancario y soluciones para espacios de atención.",
             "Corte y grabado láser, letras corpóreas y piezas especiales.",
             "Obras llave en mano con logística y colocación en todo el país."
           ],
@@ -955,7 +955,7 @@ const pageTranslations = {
         selector: "main > section:nth-of-type(3) .service-grid h3",
         all: true,
         value: text(
-          ["Imagen institucional", "Support banking", "Gráfica y decoración comercial", "Corte y grabado láser", "Letras corpóreas", "Obras llave en mano"],
+          ["Imagen institucional", "Soporte bancario", "Gráfica y decoración comercial", "Corte y grabado láser", "Letras corpóreas", "Obras llave en mano"],
           ["Institutional identity", "Banking support", "Graphics and commercial decoration", "Laser cutting and engraving", "Dimensional lettering", "Turnkey works"]
         )
       },
@@ -1169,7 +1169,10 @@ const pageTranslations = {
       { selector: "main > section:nth-of-type(1) .eyebrow", value: text("Unidad de negocio", "Business unit") },
       {
         selector: "main > section:nth-of-type(1) h1",
-        value: text("Food solutions con una nueva presencia.", "Food solutions with a new presence.")
+        value: text(
+          "Soluciones alimentarias con una nueva presencia.",
+          "Food solutions with a new presence."
+        )
       },
       {
         selector: "main > section:nth-of-type(1) .lead",
@@ -1269,7 +1272,7 @@ const pageTranslations = {
         selector: "main > section:nth-of-type(4) .service-grid h3",
         all: true,
         value: text(
-          ["Envasado para terceros", "Recipientes y tapas", "Soluciones para exhibición", "Food solutions", "Líneas propias"],
+          ["Envasado para terceros", "Recipientes y tapas", "Soluciones para exhibición", "Soluciones alimentarias", "Líneas propias"],
           ["Third-party packaging", "Containers and lids", "Display solutions", "Food solutions", "In-house lines"]
         )
       },
@@ -1832,6 +1835,14 @@ const assetHref = (path) => {
   return `${base}${path}`;
 };
 
+const brandTileStyle = (brand) =>
+  [
+    brand.marqueeBg ? `--brand-surface: ${brand.marqueeBg}` : "",
+    brand.marqueeText ? `--brand-ink: ${brand.marqueeText}` : ""
+  ]
+    .filter(Boolean)
+    .join("; ");
+
 const isCurrent = (slug) => (page === slug ? "is-current" : "");
 const isCurrentSection = (section) =>
   navSections[page] === section ? "is-current-section" : "";
@@ -2147,12 +2158,7 @@ const renderHomeMarquee = () => {
   const tileMarkup = (duplicate = false) =>
     brands
       .map((brand) => {
-        const tileStyle = [
-          brand.marqueeBg ? `--brand-surface: ${brand.marqueeBg}` : "",
-          brand.marqueeText ? `--brand-ink: ${brand.marqueeText}` : ""
-        ]
-          .filter(Boolean)
-          .join("; ");
+        const tileStyle = brandTileStyle(brand);
         const logoMarkup = brand.logo
           ? `
             <span class="logo-pill__media">
@@ -2203,6 +2209,28 @@ const renderUnitMeta = () => {
     .join("");
 };
 
+const renderUnitBrandLogo = () => {
+  const currentBrand = getCurrentBrand();
+  const media = document.querySelector(".page-hero .placeholder-media--wide");
+
+  if (!currentBrand || !currentBrand.logo || !media) {
+    return;
+  }
+
+  const tileStyle = brandTileStyle(currentBrand);
+
+  media.classList.add("brand-logo-panel");
+  if (tileStyle) {
+    media.setAttribute("style", tileStyle);
+  }
+
+  media.innerHTML = `
+    <span class="brand-logo-panel__sector">${getCopy(currentBrand.marqueeSector)}</span>
+    <img class="brand-logo-panel__image" src="${assetHref(currentBrand.logo)}" alt="${currentBrand.label}" />
+    <span class="brand-logo-panel__copy">${getCopy(currentBrand.navDescription)}</span>
+  `;
+};
+
 const renderRelatedBrands = () => {
   const container = document.querySelector("[data-related-brands]");
   const eyebrow = document.querySelector(".unit-related__eyebrow");
@@ -2229,9 +2257,19 @@ const renderRelatedBrands = () => {
   );
 
   container.innerHTML = orderedBrands
-    .map(
-      (brand) => `
-        <article class="brand-card">
+    .map((brand) => {
+      const tileStyle = brandTileStyle(brand);
+      const logoMarkup = brand.logo
+        ? `
+          <div class="brand-card__visual" ${tileStyle ? `style="${tileStyle}"` : ""}>
+            <img class="brand-card__logo" src="${assetHref(brand.logo)}" alt="${brand.label}" loading="lazy" />
+          </div>
+        `
+        : "";
+
+      return `
+        <article class="brand-card ${brand.logo ? "brand-card--logo" : ""}">
+          ${logoMarkup}
           <div class="brand-card__meta">
             <span>${getCopy(brand.marqueeSector)}</span>
             <span class="brand-card__arrow">+</span>
@@ -2242,8 +2280,8 @@ const renderRelatedBrands = () => {
             currentLanguage === "en" ? "View unit" : "Ver unidad"
           }</a>
         </article>
-      `
-    )
+      `;
+    })
     .join("");
 };
 
@@ -2298,6 +2336,7 @@ const applyLanguage = (language) => {
 
   renderHomeMarquee();
   renderUnitMeta();
+  renderUnitBrandLogo();
   renderRelatedBrands();
   updateHomeLinks();
 };

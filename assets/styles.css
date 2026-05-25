@@ -833,6 +833,31 @@ p {
   border-bottom: 1px solid rgba(23, 28, 33, 0.1);
 }
 
+.brand-card--logo {
+  grid-template-rows: 170px auto auto 1fr auto;
+}
+
+.brand-card--logo::before {
+  content: none;
+}
+
+.brand-card__visual {
+  min-height: 170px;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 48%),
+    var(--brand-surface, #e8edf1);
+  border-bottom: 1px solid rgba(23, 28, 33, 0.1);
+}
+
+.brand-card__logo {
+  width: min(100%, 190px);
+  max-height: 112px;
+  object-fit: contain;
+}
+
 .brand-card__meta,
 .brand-card h3,
 .brand-card p {
@@ -919,6 +944,52 @@ p {
 
 .placeholder-media--wide {
   min-height: 600px;
+}
+
+.brand-logo-panel {
+  min-height: 420px;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1.6rem, 4vw, 3rem);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 45%),
+    var(--brand-surface, #e8edf1);
+  color: var(--brand-ink, var(--paper));
+  text-align: center;
+}
+
+.brand-logo-panel::after {
+  content: none;
+}
+
+.brand-logo-panel__sector,
+.brand-logo-panel__copy {
+  position: relative;
+  z-index: 1;
+  color: var(--brand-ink, var(--paper));
+}
+
+.brand-logo-panel__sector {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.brand-logo-panel__image {
+  position: relative;
+  z-index: 1;
+  width: min(82%, 420px);
+  max-height: 210px;
+  object-fit: contain;
+}
+
+.brand-logo-panel__copy {
+  max-width: 34ch;
+  margin: 0;
+  font-size: 1rem;
+  opacity: 0.8;
 }
 
 .placeholder-media--tall {
@@ -1359,6 +1430,14 @@ p {
     grid-template-rows: 170px auto auto 1fr auto;
   }
 
+  .brand-card--logo {
+    grid-template-rows: 150px auto auto 1fr auto;
+  }
+
+  .brand-card__visual {
+    min-height: 150px;
+  }
+
   .button-row {
     flex-direction: column;
     align-items: stretch;
@@ -1464,6 +1543,10 @@ p {
   .placeholder-media--wide {
     min-height: 220px;
     padding: 1.3rem 1.2rem;
+  }
+
+  .brand-logo-panel__image {
+    max-height: 150px;
   }
 
   .institutional-photo {
