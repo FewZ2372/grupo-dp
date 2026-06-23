@@ -2602,6 +2602,144 @@ const renderCapabilityShowcase = () => {
   setupCapabilitySliders();
 };
 
+const enhanceCapabilityShowcaseLayout = () => {
+  const container = document.querySelector("[data-capability-showcase]");
+  if (!container || page !== "dp") {
+    return;
+  }
+
+  const sectionTitle =
+    currentLanguage === "en"
+      ? "A visual space for each IndustriaDP specialty."
+      : "Un espacio visual para cada especialidad de IndustriaDP.";
+  const sectionEyebrow =
+    currentLanguage === "en" ? "Capabilities in action" : "Capacidades en acción";
+  const sectionIntro =
+    currentLanguage === "en"
+      ? "Each block brings together real work from the unit to show how its capabilities are applied across different environments, formats and projects."
+      : "Cada bloque reúne trabajos reales de la unidad para mostrar cómo se aplican sus capacidades en distintos entornos, formatos y proyectos.";
+  const galleryLabel = currentLanguage === "en" ? "Image gallery" : "Galería de imágenes";
+  const prevLabel = currentLanguage === "en" ? "Previous image" : "Imagen anterior";
+  const nextLabel = currentLanguage === "en" ? "Next image" : "Imagen siguiente";
+  const navTitle = currentLanguage === "en" ? "Browse by area" : "Explorá por área";
+  const imageCountLabel = currentLanguage === "en" ? "images" : "imágenes";
+
+  container.innerHTML = `
+    <div class="section-heading" data-reveal>
+      <div class="eyebrow">${sectionEyebrow}</div>
+      <h2>${sectionTitle}</h2>
+      <p>${sectionIntro}</p>
+    </div>
+    <nav class="capability-nav" aria-label="${navTitle}" data-reveal>
+      ${capabilityShowcase
+        .map((capability) => {
+          const title = getCopy(capability.title);
+
+          return `
+            <a class="capability-nav__link" href="#${capability.slug}">
+              <span class="capability-nav__title">${title}</span>
+              <span class="capability-nav__count">${capability.images.length} ${imageCountLabel}</span>
+            </a>
+          `;
+        })
+        .join("")}
+    </nav>
+    ${capabilityShowcase
+      .map((capability) => {
+        const title = getCopy(capability.title);
+        const description = getCopy(capability.description);
+        const meta = capability.meta
+          .map((item) => `<span>${getCopy(item)}</span>`)
+          .join("");
+        const slides = capability.images
+          .map(
+            (imagePath, index) => `
+              <figure class="capability-slide ${index === 0 ? "is-active" : ""}" data-slide="${
+                index + 1
+              }">
+                <img
+                  src="${assetMediaHref(imagePath)}"
+                  alt="${title} ${index + 1}"
+                  loading="lazy"
+                />
+              </figure>
+            `
+          )
+          .join("");
+        const dots = capability.images
+          .map(
+            (_, index) => `
+              <button
+                class="capability-slider__dot ${index === 0 ? "is-active" : ""}"
+                type="button"
+                aria-label="${title} ${index + 1}"
+                data-go-to-slide="${index}"
+              ></button>
+            `
+          )
+          .join("");
+
+        return `
+          <article
+            class="capability-slider capability-slider--segmented"
+            data-reveal
+            data-slider
+            aria-label="${title}"
+            id="${capability.slug}"
+          >
+            <div class="capability-slider__content">
+              <div class="capability-slider__header">
+                <div class="capability-slider__eyebrow">${sectionEyebrow}</div>
+                <div class="capability-slider__title-row">
+                  <h3 class="capability-slider__title">${title}</h3>
+                  <span class="capability-slider__badge">${capability.images.length} ${imageCountLabel}</span>
+                </div>
+                <p class="capability-slider__description">${description}</p>
+              </div>
+              <div class="capability-slider__meta">${meta}</div>
+            </div>
+            <div class="capability-slider__gallery">
+              <div class="capability-slider__media">
+                <div class="capability-slider__track" aria-label="${galleryLabel}">
+                  ${slides}
+                </div>
+                <div class="capability-slider__overlay">
+                  <span class="capability-slider__counter" data-slider-count>01 / ${String(
+                    capability.images.length
+                  ).padStart(2, "0")}</span>
+                  <div class="capability-slider__controls">
+                    <button
+                      class="capability-slider__button"
+                      type="button"
+                      aria-label="${prevLabel}"
+                      data-slider-prev
+                    >
+                      &#8592;
+                    </button>
+                    <button
+                      class="capability-slider__button"
+                      type="button"
+                      aria-label="${nextLabel}"
+                      data-slider-next
+                    >
+                      &#8594;
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="capability-slider__dots" role="tablist" aria-label="${title}">
+                ${dots}
+              </div>
+            </div>
+          </article>
+        `;
+      })
+      .join("")}
+  `;
+
+  setupCapabilitySliders();
+};
+
 const setupCapabilitySliders = () => {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const sliders = [...document.querySelectorAll("[data-slider]")];
@@ -2741,6 +2879,7 @@ const applyLanguage = (language) => {
   renderUnitMeta();
   renderRelatedBrands();
   renderCapabilityShowcase();
+  enhanceCapabilityShowcaseLayout();
   updateHomeLinks();
   setupRevealObserver();
 };
