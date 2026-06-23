@@ -179,10 +179,10 @@ const brands = [
       }
     ],
     navDescription: text(
-      "Autoservicio y operación de cajeros automáticos",
+      "Cajeros automáticos y operación de red",
       "Self-service and ATM operations"
     ),
-    marqueeSector: text("Autoservicio", "Self-service"),
+    marqueeSector: text("Cajeros automáticos", "ATMs"),
     logo: "logos/efectivo-365.svg",
     marqueeBg: "#2a4fa1",
     marqueeText: "#ffffff",
@@ -222,7 +222,7 @@ const brands = [
       "Diseño y equipamiento para embarcaciones",
       "Design and equipment for vessels"
     ),
-    marqueeSector: text("Náutica", "Nautical"),
+    marqueeSector: text("Soluciones náuticas", "Nautical solutions"),
     logo: "logos/nautik.svg",
     marqueeBg: "#101914",
     marqueeText: "#93cf08",
@@ -501,7 +501,7 @@ const pageTranslations = {
             "Espacios, exhibición e identidad visual aplicada a entornos comerciales e institucionales.",
             "Comercio exterior con enfoque operativo y articulación entre mercados estratégicos.",
             "Soluciones alimentarias y packaging especializado con fuerte valor de presentación.",
-            "Autoservicio, continuidad operativa y soluciones para cajeros extra bancarios.",
+            "Cajeros automáticos, continuidad operativa y soluciones para redes extra bancarias.",
             "Diseño y equipamiento con sensibilidad premium para el entorno náutico.",
             "Estaciones de carga pensadas para sumar servicio y presencia en espacios de uso intensivo."
           ],
@@ -857,7 +857,7 @@ const pageTranslations = {
         selector: "main > section:nth-of-type(3) .contact-grid h3",
         all: true,
         value: text(
-          ["Industria y exhibición", "Comercio exterior", "Soluciones alimentarias", "Autoservicio", "Náutica", "Carga y energía"],
+          ["Industria y exhibición", "Comercio exterior", "Soluciones alimentarias", "Cajeros automáticos", "Soluciones náuticas", "Carga y energía"],
           ["Industry and display", "Foreign trade", "Food solutions", "Self-service", "Nautical", "Charging and energy"]
         )
       },
@@ -1338,7 +1338,10 @@ const pageTranslations = {
       { selector: "main > section:nth-of-type(1) .eyebrow", value: text("Unidad de negocio", "Business unit") },
       {
         selector: "main > section:nth-of-type(1) h1",
-        value: text("Autoservicio para entornos extra bancarios.", "Self-service for off-bank environments.")
+        value: text(
+          "Cajeros automáticos para entornos extra bancarios.",
+          "ATMs for off-bank environments."
+        )
       },
       {
         selector: "main > section:nth-of-type(1) .lead",
@@ -1835,6 +1838,231 @@ const assetHref = (path) => {
   return `${base}${path}`;
 };
 
+const assetMediaHref = (path) => encodeURI(assetHref(path));
+
+const capabilityShowcase = [
+  {
+    slug: "carteleria-institucional",
+    title: text("Cartelería institucional", "Institutional signage"),
+    description: text(
+      "Piezas pensadas para reforzar identidad, presencia y lectura de marca en fachadas, accesos y espacios de circulación.",
+      "Pieces designed to strengthen identity, presence and brand legibility across facades, entrances and circulation areas."
+    ),
+    meta: [
+      text("Imagen institucional", "Institutional identity"),
+      text("Fachadas", "Facades"),
+      text("Señalización", "Signage")
+    ],
+    images: [
+      "imagenes IndustriaDP/Carteleria Institucional/WhatsApp Image 2026-06-04 at 16.26.42.jpeg",
+      "imagenes IndustriaDP/Carteleria Institucional/WhatsApp Image 2026-06-04 at 16.26.42 (4).jpeg",
+      "imagenes IndustriaDP/Carteleria Institucional/WhatsApp Image 2026-06-04 at 16.26.42 (3).jpeg",
+      "imagenes IndustriaDP/Carteleria Institucional/WhatsApp Image 2026-06-04 at 16.26.42 (2).jpeg",
+      "imagenes IndustriaDP/Carteleria Institucional/WhatsApp Image 2026-06-04 at 16.26.42 (1).jpeg",
+      "imagenes IndustriaDP/Carteleria Institucional/WhatsApp Image 2026-06-04 at 16.26.41.jpeg",
+      "imagenes IndustriaDP/Carteleria Institucional/WhatsApp Image 2026-06-04 at 16.26.41 (4).jpeg",
+      "imagenes IndustriaDP/Carteleria Institucional/WhatsApp Image 2026-06-04 at 16.26.41 (2).jpeg",
+      "imagenes IndustriaDP/Carteleria Institucional/WhatsApp Image 2026-06-04 at 16.26.41 (1).jpeg",
+      "imagenes IndustriaDP/Carteleria Institucional/WhatsApp Image 2026-06-04 at 16.26.40 (4).jpeg",
+      "imagenes IndustriaDP/Carteleria Institucional/WhatsApp Image 2026-06-04 at 16.26.40 (3).jpeg",
+      "imagenes IndustriaDP/Carteleria Institucional/WhatsApp Image 2026-06-04 at 16.26.40 (2).jpeg",
+      "imagenes IndustriaDP/Carteleria Institucional/WhatsApp Image 2026-06-04 at 16.26.40 (1).jpeg"
+    ]
+  },
+  {
+    slug: "grafica-plotting",
+    title: text("Gráfica y plotting", "Graphics and plotting"),
+    description: text(
+      "Aplicaciones gráficas de gran formato para campañas, recorridos, vidrieras, superficies y activaciones comerciales.",
+      "Large-format graphic applications for campaigns, journeys, shop windows, surfaces and commercial activations."
+    ),
+    meta: [
+      text("Ploteo", "Plotting"),
+      text("Gran formato", "Large format"),
+      text("Campañas", "Campaigns")
+    ],
+    images: [
+      "imagenes IndustriaDP/Grágica - Plotting/WhatsApp Image 2026-06-09 at 14.09.54 (2).jpeg",
+      "imagenes IndustriaDP/Grágica - Plotting/WhatsApp Image 2026-06-09 at 14.09.53 (3).jpeg",
+      "imagenes IndustriaDP/Grágica - Plotting/WhatsApp Image 2026-06-09 at 14.09.53 (2).jpeg",
+      "imagenes IndustriaDP/Grágica - Plotting/WhatsApp Image 2026-06-09 at 14.09.53 (1).jpeg",
+      "imagenes IndustriaDP/Grágica - Plotting/WhatsApp Image 2026-06-09 at 14.09.52.jpeg",
+      "imagenes IndustriaDP/Grágica - Plotting/WhatsApp Image 2026-06-09 at 14.09.52 (2).jpeg",
+      "imagenes IndustriaDP/Grágica - Plotting/WhatsApp Image 2026-06-09 at 14.09.55 (2).jpeg",
+      "imagenes IndustriaDP/Grágica - Plotting/WhatsApp Image 2026-06-09 at 14.09.55 (1).jpeg",
+      "imagenes IndustriaDP/Grágica - Plotting/WhatsApp Image 2026-06-09 at 14.09.54.jpeg",
+      "imagenes IndustriaDP/Grágica - Plotting/WhatsApp Image 2026-06-09 at 14.09.56 (1).jpeg",
+      "imagenes IndustriaDP/Grágica - Plotting/WhatsApp Image 2026-06-09 at 14.09.55.jpeg",
+      "imagenes IndustriaDP/Grágica - Plotting/WhatsApp Image 2026-06-09 at 14.09.56 (3).jpeg",
+      "imagenes IndustriaDP/Grágica - Plotting/WhatsApp Image 2026-06-09 at 14.09.56.jpeg"
+    ]
+  },
+  {
+    slug: "corte-laser",
+    title: text("Corte y grabado láser", "Laser cutting and engraving"),
+    description: text(
+      "Terminaciones de precisión para identidad, señalización, piezas especiales y resoluciones técnicas con alto nivel de detalle.",
+      "Precision finishes for identity, signage, special parts and technical solutions with a high level of detail."
+    ),
+    meta: [
+      text("Precisión", "Precision"),
+      text("Piezas especiales", "Special parts"),
+      text("Terminaciones", "Finishes")
+    ],
+    images: [
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.02.jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.02 (2).jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.01 (3).jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.01 (2).jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.01 (1).jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.00.jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.00 (2).jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.00 (1).jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.04 (3).jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.04 (2).jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.03.jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.03 (3).jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.05 (1).jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.06 (1).jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.05 (2).jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.07 (1).jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-23 at 14.49.51.jpeg",
+      "imagenes IndustriaDP/Corte y Grabado laser/WhatsApp Image 2026-06-09 at 16.09.04.jpeg"
+    ]
+  },
+  {
+    slug: "letras-corporeas",
+    title: text("Letras corpóreas", "Dimensional lettering"),
+    description: text(
+      "Soluciones de volumen y presencia para fachadas, interiores y puntos de contacto donde la marca necesita destacarse.",
+      "High-presence volumetric solutions for facades, interiors and touchpoints where the brand needs to stand out."
+    ),
+    meta: [
+      text("Volumen", "Volume"),
+      text("Marca", "Brand"),
+      text("Visibilidad", "Visibility")
+    ],
+    images: [
+      "imagenes IndustriaDP/Letras Corpóreas/WhatsApp Image 2026-06-09 at 14.06.01 (2).jpeg",
+      "imagenes IndustriaDP/Letras Corpóreas/WhatsApp Image 2026-06-09 at 14.06.01 (1).jpeg",
+      "imagenes IndustriaDP/Letras Corpóreas/WhatsApp Image 2026-06-09 at 14.06.01 (3).jpeg",
+      "imagenes IndustriaDP/Letras Corpóreas/WhatsApp Image 2026-06-09 at 14.06.01 (4).jpeg",
+      "imagenes IndustriaDP/Letras Corpóreas/WhatsApp Image 2026-06-09 at 14.06.02 (2).jpeg",
+      "imagenes IndustriaDP/Letras Corpóreas/WhatsApp Image 2026-06-09 at 14.06.01.jpeg",
+      "imagenes IndustriaDP/Letras Corpóreas/WhatsApp Image 2026-06-09 at 14.06.02 (3).jpeg",
+      "imagenes IndustriaDP/Letras Corpóreas/WhatsApp Image 2026-06-09 at 14.06.03 (1).jpeg",
+      "imagenes IndustriaDP/Letras Corpóreas/WhatsApp Image 2026-06-09 at 14.06.03 (3).jpeg",
+      "imagenes IndustriaDP/Letras Corpóreas/WhatsApp Image 2026-06-09 at 14.06.03 (2).jpeg",
+      "imagenes IndustriaDP/Letras Corpóreas/WhatsApp Image 2026-06-09 at 14.06.03.jpeg"
+    ]
+  },
+  {
+    slug: "stands",
+    title: text("Stands", "Stands"),
+    description: text(
+      "Espacios preparados para exhibir, recibir y activar marca en ferias, eventos y entornos comerciales de alto impacto.",
+      "Spaces built to showcase, host and activate the brand in fairs, events and high-impact commercial environments."
+    ),
+    meta: [
+      text("Eventos", "Events"),
+      text("Exhibición", "Display"),
+      text("Montaje", "Setup")
+    ],
+    images: [
+      "imagenes IndustriaDP/Stands/WhatsApp Image 2026-06-09 at 15.01.42 (2).jpeg",
+      "imagenes IndustriaDP/Stands/WhatsApp Image 2026-06-09 at 15.01.41.jpeg",
+      "imagenes IndustriaDP/Stands/WhatsApp Image 2026-06-09 at 15.01.41 (3).jpeg",
+      "imagenes IndustriaDP/Stands/WhatsApp Image 2026-06-09 at 15.01.43 (1).jpeg",
+      "imagenes IndustriaDP/Stands/WhatsApp Image 2026-06-09 at 15.01.43 (2).jpeg",
+      "imagenes IndustriaDP/Stands/WhatsApp Image 2026-06-09 at 15.01.43 (4).jpeg",
+      "imagenes IndustriaDP/Stands/WhatsApp Image 2026-06-09 at 15.01.43.jpeg"
+    ]
+  },
+  {
+    slug: "diseno-renders",
+    title: text("Diseño y renders", "Design and renders"),
+    description: text(
+      "Etapas de visualización y desarrollo para validar propuestas, recorridos y materialidad antes de la producción.",
+      "Visualization and development stages used to validate proposals, journeys and materials before production."
+    ),
+    meta: [
+      text("Concepto", "Concept"),
+      text("Visualización", "Visualization"),
+      text("Desarrollo", "Development")
+    ],
+    images: [
+      "imagenes IndustriaDP/Diseño - Renders/WhatsApp Image 2026-06-09 at 14.01.32 (2).jpeg",
+      "imagenes IndustriaDP/Diseño - Renders/WhatsApp Image 2026-06-09 at 14.01.32 (1).jpeg",
+      "imagenes IndustriaDP/Diseño - Renders/WhatsApp Image 2026-06-09 at 14.01.32.jpeg",
+      "imagenes IndustriaDP/Diseño - Renders/WhatsApp Image 2026-06-09 at 14.01.33 (1).jpeg",
+      "imagenes IndustriaDP/Diseño - Renders/WhatsApp Image 2026-06-09 at 14.01.33 (2).jpeg",
+      "imagenes IndustriaDP/Diseño - Renders/WhatsApp Image 2026-06-09 at 14.01.33.jpeg"
+    ]
+  },
+  {
+    slug: "proceso-rapipago",
+    title: text("Proceso productivo Rapipago", "Rapipago production process"),
+    description: text(
+      "Secuencias de fabricación e implementación para proyectos bancarios y puntos de atención con despliegue operativo.",
+      "Fabrication and implementation sequences for banking projects and service points with operational rollout."
+    ),
+    meta: [
+      text("Soporte bancario", "Banking support"),
+      text("Producción", "Production"),
+      text("Operación", "Operations")
+    ],
+    images: [
+      "imagenes IndustriaDP/Proceso Productivo Rapipago/WhatsApp Image 2026-06-09 at 14.00.17.jpeg",
+      "imagenes IndustriaDP/Proceso Productivo Rapipago/WhatsApp Image 2026-06-09 at 14.00.17 (2).jpeg",
+      "imagenes IndustriaDP/Proceso Productivo Rapipago/WhatsApp Image 2026-06-09 at 14.00.17 (1).jpeg",
+      "imagenes IndustriaDP/Proceso Productivo Rapipago/WhatsApp Image 2026-06-09 at 14.00.16.jpeg",
+      "imagenes IndustriaDP/Proceso Productivo Rapipago/WhatsApp Image 2026-06-09 at 14.00.16 (4).jpeg",
+      "imagenes IndustriaDP/Proceso Productivo Rapipago/WhatsApp Image 2026-06-09 at 14.00.16 (3).jpeg",
+      "imagenes IndustriaDP/Proceso Productivo Rapipago/WhatsApp Image 2026-06-09 at 14.00.16 (2).jpeg",
+      "imagenes IndustriaDP/Proceso Productivo Rapipago/WhatsApp Image 2026-06-09 at 14.00.16 (1).jpeg",
+      "imagenes IndustriaDP/Proceso Productivo Rapipago/WhatsApp Image 2026-06-09 at 14.00.15.jpeg",
+      "imagenes IndustriaDP/Proceso Productivo Rapipago/WhatsApp Image 2026-06-09 at 14.00.15 (2).jpeg",
+      "imagenes IndustriaDP/Proceso Productivo Rapipago/WhatsApp Image 2026-06-09 at 14.00.15 (1).jpeg"
+    ]
+  },
+  {
+    slug: "decoracion-comercial",
+    title: text("Decoración comercial", "Commercial decoration"),
+    description: text(
+      "Intervenciones visuales para transformar espacios de venta, mejorar recorridos y potenciar la experiencia de marca.",
+      "Visual interventions that transform retail spaces, improve journeys and strengthen the brand experience."
+    ),
+    meta: [
+      text("Retail", "Retail"),
+      text("Ambientación", "Spatial styling"),
+      text("Experiencia", "Experience")
+    ],
+    images: [
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.56.jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.56 (3).jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.56 (2).jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.56 (1).jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.55 (3).jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.55 (1).jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.54.jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.54 (3).jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.52 (3).jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.53 (2).jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.52 (2).jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.53 (1).jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.52 (1).jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.52.jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.51.jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.51 (2).jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.51 (1).jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.50 (2).jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.50 (3).jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.50 (1).jpeg",
+      "imagenes IndustriaDP/Decoración Comercial/WhatsApp Image 2026-06-09 at 15.00.49.jpeg"
+    ]
+  }
+];
+
 const brandTileStyle = (brand) =>
   [
     brand.marqueeBg ? `--brand-surface: ${brand.marqueeBg}` : "",
@@ -2209,28 +2437,6 @@ const renderUnitMeta = () => {
     .join("");
 };
 
-const renderUnitBrandLogo = () => {
-  const currentBrand = getCurrentBrand();
-  const media = document.querySelector(".page-hero .placeholder-media--wide");
-
-  if (!currentBrand || !currentBrand.logo || !media) {
-    return;
-  }
-
-  const tileStyle = brandTileStyle(currentBrand);
-
-  media.classList.add("brand-logo-panel");
-  if (tileStyle) {
-    media.setAttribute("style", tileStyle);
-  }
-
-  media.innerHTML = `
-    <span class="brand-logo-panel__sector">${getCopy(currentBrand.marqueeSector)}</span>
-    <img class="brand-logo-panel__image" src="${assetHref(currentBrand.logo)}" alt="${currentBrand.label}" />
-    <span class="brand-logo-panel__copy">${getCopy(currentBrand.navDescription)}</span>
-  `;
-};
-
 const renderRelatedBrands = () => {
   const container = document.querySelector("[data-related-brands]");
   const eyebrow = document.querySelector(".unit-related__eyebrow");
@@ -2285,6 +2491,336 @@ const renderRelatedBrands = () => {
     .join("");
 };
 
+const renderCapabilityShowcase = () => {
+  const container = document.querySelector("[data-capability-showcase]");
+  if (!container || page !== "dp") {
+    return;
+  }
+
+  const sectionTitle =
+    currentLanguage === "en"
+      ? "A visual space for each IndustriaDP specialty."
+      : "Un espacio visual para cada especialidad de IndustriaDP.";
+  const sectionEyebrow =
+    currentLanguage === "en" ? "Capabilities in action" : "Capacidades en acción";
+  const sectionIntro =
+    currentLanguage === "en"
+      ? "Each block brings together real work from the unit to show how its capabilities are applied across different environments, formats and projects."
+      : "Cada bloque reúne trabajos reales de la unidad para mostrar cómo se aplican sus capacidades en distintos entornos, formatos y proyectos.";
+  const galleryLabel = currentLanguage === "en" ? "Image gallery" : "Galería de imágenes";
+  const prevLabel = currentLanguage === "en" ? "Previous image" : "Imagen anterior";
+  const nextLabel = currentLanguage === "en" ? "Next image" : "Imagen siguiente";
+
+  container.innerHTML = `
+    <div class="section-heading" data-reveal>
+      <div class="eyebrow">${sectionEyebrow}</div>
+      <h2>${sectionTitle}</h2>
+      <p>${sectionIntro}</p>
+    </div>
+    ${capabilityShowcase
+      .map((capability) => {
+        const title = getCopy(capability.title);
+        const description = getCopy(capability.description);
+        const meta = capability.meta
+          .map((item) => `<span>${getCopy(item)}</span>`)
+          .join("");
+        const slides = capability.images
+          .map(
+            (imagePath, index) => `
+              <figure class="capability-slide ${index === 0 ? "is-active" : ""}" data-slide="${
+                index + 1
+              }">
+                <img
+                  src="${assetMediaHref(imagePath)}"
+                  alt="${title} ${index + 1}"
+                  loading="lazy"
+                />
+              </figure>
+            `
+          )
+          .join("");
+        const dots = capability.images
+          .map(
+            (_, index) => `
+              <button
+                class="capability-slider__dot ${index === 0 ? "is-active" : ""}"
+                type="button"
+                aria-label="${title} ${index + 1}"
+                data-go-to-slide="${index}"
+              ></button>
+            `
+          )
+          .join("");
+
+        return `
+          <article class="capability-slider" data-reveal data-slider aria-label="${title}">
+            <div class="capability-slider__media">
+              <div class="capability-slider__track" aria-label="${galleryLabel}">
+                ${slides}
+              </div>
+              <div class="capability-slider__overlay">
+                <span class="capability-slider__counter" data-slider-count>01 / ${String(
+                  capability.images.length
+                ).padStart(2, "0")}</span>
+                <div class="capability-slider__controls">
+                  <button
+                    class="capability-slider__button"
+                    type="button"
+                    aria-label="${prevLabel}"
+                    data-slider-prev
+                  >
+                    ←
+                  </button>
+                  <button
+                    class="capability-slider__button"
+                    type="button"
+                    aria-label="${nextLabel}"
+                    data-slider-next
+                  >
+                    →
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="capability-slider__content">
+              <div class="capability-slider__header">
+                <div class="capability-slider__eyebrow">${sectionEyebrow}</div>
+                <h3 class="capability-slider__title">${title}</h3>
+                <p class="capability-slider__description">${description}</p>
+              </div>
+              <div class="capability-slider__meta">${meta}</div>
+              <div class="capability-slider__dots" role="tablist" aria-label="${title}">
+                ${dots}
+              </div>
+            </div>
+          </article>
+        `;
+      })
+      .join("")}
+  `;
+
+  setupCapabilitySliders();
+};
+
+const enhanceCapabilityShowcaseLayout = () => {
+  const container = document.querySelector("[data-capability-showcase]");
+  if (!container || page !== "dp") {
+    return;
+  }
+
+  const sectionTitle =
+    currentLanguage === "en"
+      ? "A visual space for each IndustriaDP specialty."
+      : "Un espacio visual para cada especialidad de IndustriaDP.";
+  const sectionEyebrow =
+    currentLanguage === "en" ? "Capabilities in action" : "Capacidades en acción";
+  const sectionIntro =
+    currentLanguage === "en"
+      ? "Each block brings together real work from the unit to show how its capabilities are applied across different environments, formats and projects."
+      : "Cada bloque reúne trabajos reales de la unidad para mostrar cómo se aplican sus capacidades en distintos entornos, formatos y proyectos.";
+  const galleryLabel = currentLanguage === "en" ? "Image gallery" : "Galería de imágenes";
+  const prevLabel = currentLanguage === "en" ? "Previous image" : "Imagen anterior";
+  const nextLabel = currentLanguage === "en" ? "Next image" : "Imagen siguiente";
+  const navTitle = currentLanguage === "en" ? "Browse by area" : "Explorá por área";
+  const imageCountLabel = currentLanguage === "en" ? "images" : "imágenes";
+
+  container.innerHTML = `
+    <div class="section-heading" data-reveal>
+      <div class="eyebrow">${sectionEyebrow}</div>
+      <h2>${sectionTitle}</h2>
+      <p>${sectionIntro}</p>
+    </div>
+    <nav class="capability-nav" aria-label="${navTitle}" data-reveal>
+      ${capabilityShowcase
+        .map((capability) => {
+          const title = getCopy(capability.title);
+
+          return `
+            <a class="capability-nav__link" href="#${capability.slug}">
+              <span class="capability-nav__title">${title}</span>
+              <span class="capability-nav__count">${capability.images.length} ${imageCountLabel}</span>
+            </a>
+          `;
+        })
+        .join("")}
+    </nav>
+    ${capabilityShowcase
+      .map((capability) => {
+        const title = getCopy(capability.title);
+        const description = getCopy(capability.description);
+        const meta = capability.meta
+          .map((item) => `<span>${getCopy(item)}</span>`)
+          .join("");
+        const slides = capability.images
+          .map(
+            (imagePath, index) => `
+              <figure class="capability-slide ${index === 0 ? "is-active" : ""}" data-slide="${
+                index + 1
+              }">
+                <img
+                  src="${assetMediaHref(imagePath)}"
+                  alt="${title} ${index + 1}"
+                  loading="lazy"
+                />
+              </figure>
+            `
+          )
+          .join("");
+        const dots = capability.images
+          .map(
+            (_, index) => `
+              <button
+                class="capability-slider__dot ${index === 0 ? "is-active" : ""}"
+                type="button"
+                aria-label="${title} ${index + 1}"
+                data-go-to-slide="${index}"
+              ></button>
+            `
+          )
+          .join("");
+
+        return `
+          <article
+            class="capability-slider capability-slider--segmented"
+            data-reveal
+            data-slider
+            aria-label="${title}"
+            id="${capability.slug}"
+          >
+            <div class="capability-slider__content">
+              <div class="capability-slider__header">
+                <div class="capability-slider__eyebrow">${sectionEyebrow}</div>
+                <div class="capability-slider__title-row">
+                  <h3 class="capability-slider__title">${title}</h3>
+                  <span class="capability-slider__badge">${capability.images.length} ${imageCountLabel}</span>
+                </div>
+                <p class="capability-slider__description">${description}</p>
+              </div>
+              <div class="capability-slider__meta">${meta}</div>
+            </div>
+            <div class="capability-slider__gallery">
+              <div class="capability-slider__media">
+                <div class="capability-slider__track" aria-label="${galleryLabel}">
+                  ${slides}
+                </div>
+                <div class="capability-slider__overlay">
+                  <span class="capability-slider__counter" data-slider-count>01 / ${String(
+                    capability.images.length
+                  ).padStart(2, "0")}</span>
+                  <div class="capability-slider__controls">
+                    <button
+                      class="capability-slider__button"
+                      type="button"
+                      aria-label="${prevLabel}"
+                      data-slider-prev
+                    >
+                      &#8592;
+                    </button>
+                    <button
+                      class="capability-slider__button"
+                      type="button"
+                      aria-label="${nextLabel}"
+                      data-slider-next
+                    >
+                      &#8594;
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="capability-slider__dots" role="tablist" aria-label="${title}">
+                ${dots}
+              </div>
+            </div>
+          </article>
+        `;
+      })
+      .join("")}
+  `;
+
+  setupCapabilitySliders();
+};
+
+const setupCapabilitySliders = () => {
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const sliders = [...document.querySelectorAll("[data-slider]")];
+
+  sliders.forEach((slider) => {
+    const slides = [...slider.querySelectorAll(".capability-slide")];
+    const dots = [...slider.querySelectorAll("[data-go-to-slide]")];
+    const prevButton = slider.querySelector("[data-slider-prev]");
+    const nextButton = slider.querySelector("[data-slider-next]");
+    const counter = slider.querySelector("[data-slider-count]");
+
+    if (slides.length <= 1) {
+      return;
+    }
+
+    let currentIndex = 0;
+    let intervalId = null;
+
+    const updateSlider = (nextIndex) => {
+      currentIndex = (nextIndex + slides.length) % slides.length;
+
+      slides.forEach((slide, index) => {
+        slide.classList.toggle("is-active", index === currentIndex);
+      });
+
+      dots.forEach((dot, index) => {
+        dot.classList.toggle("is-active", index === currentIndex);
+      });
+
+      if (counter) {
+        counter.textContent = `${String(currentIndex + 1).padStart(2, "0")} / ${String(
+          slides.length
+        ).padStart(2, "0")}`;
+      }
+    };
+
+    const stopAutoplay = () => {
+      if (intervalId) {
+        window.clearInterval(intervalId);
+        intervalId = null;
+      }
+    };
+
+    const startAutoplay = () => {
+      if (reducedMotion || intervalId) {
+        return;
+      }
+
+      intervalId = window.setInterval(() => {
+        updateSlider(currentIndex + 1);
+      }, 4200);
+    };
+
+    prevButton?.addEventListener("click", () => {
+      updateSlider(currentIndex - 1);
+      stopAutoplay();
+      startAutoplay();
+    });
+
+    nextButton?.addEventListener("click", () => {
+      updateSlider(currentIndex + 1);
+      stopAutoplay();
+      startAutoplay();
+    });
+
+    dots.forEach((dot) => {
+      dot.addEventListener("click", () => {
+        updateSlider(Number(dot.dataset.goToSlide || 0));
+        stopAutoplay();
+        startAutoplay();
+      });
+    });
+
+    slider.addEventListener("mouseenter", stopAutoplay);
+    slider.addEventListener("mouseleave", startAutoplay);
+
+    updateSlider(0);
+    startAutoplay();
+  });
+};
+
 const updateHomeLinks = () => {
   const secondaryButton = document.querySelector(".home-hero__secondary");
   if (secondaryButton) {
@@ -2292,12 +2828,17 @@ const updateHomeLinks = () => {
   }
 };
 
-const revealables = [...document.querySelectorAll("[data-reveal]")];
 let revealObserver = null;
 
 const setupRevealObserver = () => {
+  const revealables = [...document.querySelectorAll("[data-reveal]")];
+
   if (revealables.length === 0) {
     return;
+  }
+
+  if (revealObserver) {
+    revealObserver.disconnect();
   }
 
   if (!("IntersectionObserver" in window)) {
@@ -2336,10 +2877,11 @@ const applyLanguage = (language) => {
 
   renderHomeMarquee();
   renderUnitMeta();
-  renderUnitBrandLogo();
   renderRelatedBrands();
+  renderCapabilityShowcase();
+  enhanceCapabilityShowcaseLayout();
   updateHomeLinks();
+  setupRevealObserver();
 };
 
 applyLanguage(currentLanguage);
-setupRevealObserver();
