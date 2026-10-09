@@ -69,6 +69,9 @@ const brands = [
       "Identity, display and commercial spaces"
     ),
     marqueeSector: text("Industria y comunicación", "Industry and communication"),
+    logo: "logos/SVG/03_DP_INDUSTRIA_PUBLICITARIA.svg",
+    marqueeBg: "#171a1d",
+    marqueeText: "#ffffff",
     marqueeDescription: text(
       "Identidad, exhibición y soluciones integrales para espacios comerciales e institucionales.",
       "Identity, display and integrated solutions for commercial and institutional spaces."
@@ -106,6 +109,9 @@ const brands = [
       "Foreign trade and operational coordination"
     ),
     marqueeSector: text("Comercio exterior", "Foreign trade"),
+    logo: "logos/SVG/04_DP_COMEX.svg",
+    marqueeBg: "#171a1d",
+    marqueeText: "#ffffff",
     marqueeDescription: text(
       "Gestión integral para operaciones internacionales y vínculo con mercados estratégicos.",
       "End-to-end management for international operations and strategic market connections."
@@ -143,9 +149,9 @@ const brands = [
       "Food solutions and specialized packaging"
     ),
     marqueeSector: text("Soluciones alimentarias", "Food solutions"),
-    logo: "logos/pack-gourmet.svg",
-    marqueeBg: "#ffe1e2",
-    marqueeText: "#171c21",
+    logo: "logos/SVG/06_DP_PACK_GOURMET.svg",
+    marqueeBg: "#171a1d",
+    marqueeText: "#ffffff",
     marqueeDescription: text(
       "Packaging especializado para terceros y líneas propias con foco en presentación.",
       "Specialized packaging for third parties and in-house lines with a presentation-first approach."
@@ -183,8 +189,8 @@ const brands = [
       "Self-service and ATM operations"
     ),
     marqueeSector: text("Cajeros automáticos", "ATMs"),
-    logo: "logos/efectivo-365.svg",
-    marqueeBg: "#2a4fa1",
+    logo: "logos/SVG/05_DP_EFECTIVO_365.svg",
+    marqueeBg: "#171a1d",
     marqueeText: "#ffffff",
     marqueeDescription: text(
       "Comercialización, instalación, mantenimiento y operación de cajeros extra bancarios.",
@@ -223,9 +229,9 @@ const brands = [
       "Design and equipment for vessels"
     ),
     marqueeSector: text("Soluciones náuticas", "Nautical solutions"),
-    logo: "logos/nautik.svg",
-    marqueeBg: "#101914",
-    marqueeText: "#93cf08",
+    logo: "logos/SVG/08_DP_NAUTIK.svg",
+    marqueeBg: "#171a1d",
+    marqueeText: "#ffffff",
     marqueeDescription: text(
       "Diseño, restyling y piezas especiales para embarcaciones y marinas premium.",
       "Design, restyling and special parts for premium boats and marinas."
@@ -263,12 +269,26 @@ const brands = [
       "Charging stations for high-traffic spaces"
     ),
     marqueeSector: text("Soluciones de carga", "Charging solutions"),
+    logo: "logos/SVG/07_DP_POWER_STATION.svg",
+    marqueeBg: "#171a1d",
+    marqueeText: "#ffffff",
     marqueeDescription: text(
       "Torres de carga para celulares pensadas para servicio, utilidad y presencia.",
       "Cell-phone charging towers built for service, utility and presence."
     )
   }
 ];
+
+const homeLogo = {
+  key: "dp-home",
+  label: "DP Home",
+  logo: "logos/SVG/02_DP_HOME.svg",
+  marqueeBg: "#171a1d",
+  marqueeText: "#ffffff",
+  marqueeSector: text("Unidad de Grupo DP", "Grupo DP unit")
+};
+
+const marqueeBrands = [homeLogo, ...brands];
 
 const chromeCopy = {
   es: {
@@ -2136,8 +2156,11 @@ const renderChrome = () => {
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand-mark" href="${href(routes.home)}" aria-label="${ui.brandAria}">
-          <span class="brand-mark__title">GRUPO DP</span>
-          <span class="brand-mark__subtitle">${ui.brandSubtitle}</span>
+          <img
+            class="brand-mark__logo"
+            src="${assetHref("logos/SVG/01_GRUPO_DP_NEGRO.svg")}"
+            alt=""
+          />
         </a>
         <div class="header-tools">
           <nav class="site-nav" id="site-nav" aria-label="${ui.navAria}">
@@ -2167,7 +2190,12 @@ const renderChrome = () => {
       <div class="container">
         <div class="footer-grid">
           <div>
-            <span class="footer-title">Grupo DP</span>
+            <img
+              class="footer-logo"
+              src="${assetHref("logos/SVG/01_GRUPO_DP.svg")}"
+              alt="Grupo DP"
+              loading="lazy"
+            />
             <p>${ui.footerSummary}</p>
           </div>
           <div>
@@ -2384,9 +2412,11 @@ const renderHomeMarquee = () => {
   }
 
   const tileMarkup = (duplicate = false) =>
-    brands
+    marqueeBrands
       .map((brand) => {
         const tileStyle = brandTileStyle(brand);
+        const tagName = brand.path ? "a" : "div";
+        const destination = brand.path ? `href="${href(brand.path)}"` : 'role="group"';
         const logoMarkup = brand.logo
           ? `
             <span class="logo-pill__media">
@@ -2396,15 +2426,15 @@ const renderHomeMarquee = () => {
           : `<strong class="logo-pill__title">${brand.label}</strong>`;
 
         return `
-          <a
+          <${tagName}
             class="logo-pill ${brand.logo ? "logo-pill--image" : ""}"
-            href="${href(brand.path)}"
+            ${destination}
             ${tileStyle ? `style="${tileStyle}"` : ""}
             ${duplicate ? 'aria-hidden="true" tabindex="-1"' : ""}
           >
             <span class="logo-pill__sector">${getCopy(brand.marqueeSector)}</span>
             ${logoMarkup}
-          </a>
+          </${tagName}>
         `;
       })
       .join("");

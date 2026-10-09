@@ -117,26 +117,18 @@ select {
 }
 
 .brand-mark {
-  display: inline-flex;
-  flex-direction: column;
-  gap: 0.16rem;
-  min-width: 240px;
-  min-width: 0;
+  flex: 0 0 auto;
+  width: 154px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  padding: 0;
 }
 
-.brand-mark__title {
-  font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
-  font-size: 1.02rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.brand-mark__subtitle {
-  color: rgba(105, 191, 69, 0.88);
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.brand-mark__logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .nav-toggle {
@@ -508,6 +500,33 @@ main {
   --unit-surface: #101914;
   --unit-ink: #93cf08;
   --unit-logo-scale: 1.25;
+}
+
+.unit-identity.unit-identity--logo {
+  width: min(100%, 340px);
+  min-height: 126px;
+  grid-template-columns: minmax(0, 1fr);
+  margin-top: 0;
+  padding: 1rem 1.25rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-s);
+  background: #171a1d;
+}
+
+.unit-identity.unit-identity--logo::before,
+.unit-identity.unit-identity--logo::after {
+  content: none;
+}
+
+.unit-identity.unit-identity--logo .unit-identity__mark {
+  min-height: 92px;
+  place-items: center;
+}
+
+.unit-identity.unit-identity--logo .unit-identity__mark img {
+  width: min(100%, 280px);
+  max-height: 96px;
 }
 
 .institutional-photo {
@@ -884,7 +903,7 @@ p {
   min-height: 104px;
   padding: 0.95rem 1.2rem;
   border: 0;
-  border-right: 1px solid rgba(23, 28, 33, 0.1);
+  border-right: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: 0;
   background: var(--brand-surface, transparent);
   color: var(--brand-ink, var(--paper));
@@ -894,8 +913,8 @@ p {
 
 .logo-pill:hover {
   background:
-    linear-gradient(0deg, rgba(23, 28, 33, 0.055), rgba(23, 28, 33, 0.055)),
-    var(--brand-surface, rgba(23, 28, 33, 0.045));
+    linear-gradient(0deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.045)),
+    var(--brand-surface, #171a1d);
   box-shadow: none;
 }
 
@@ -903,6 +922,8 @@ p {
   align-items: center;
   min-width: 270px;
   padding-inline: 1.35rem;
+  background: var(--brand-surface, #171a1d);
+  color: var(--brand-ink, #ffffff);
   text-align: center;
 }
 
@@ -982,15 +1003,13 @@ p {
   display: grid;
   place-items: center;
   padding: 1rem;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 48%),
-    var(--brand-surface, #e8edf1);
-  border-bottom: 1px solid rgba(23, 28, 33, 0.1);
+  background: var(--brand-surface, #171a1d);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
 }
 
 .brand-card__logo {
-  width: min(100%, 150px);
-  max-height: 82px;
+  width: min(100%, 205px);
+  max-height: 104px;
   object-fit: contain;
 }
 
@@ -1474,6 +1493,14 @@ p {
   letter-spacing: 0.12em;
 }
 
+.footer-logo {
+  width: min(100%, 176px);
+  height: 88px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+  object-position: left center;
+}
+
 .footer-links {
   display: grid;
   gap: 0.6rem;
@@ -1600,19 +1627,8 @@ p {
   }
 
   .brand-mark {
-    flex: 1 1 auto;
-    min-width: 0;
-    max-width: 13rem;
-  }
-
-  .brand-mark__title {
-    font-size: 0.98rem;
-    line-height: 1;
-  }
-
-  .brand-mark__subtitle {
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
+    width: 142px;
+    height: 54px;
   }
 
   .header-tools {
@@ -1835,16 +1851,8 @@ p {
   }
 
   .brand-mark {
-    max-width: 11rem;
-  }
-
-  .brand-mark__title {
-    font-size: 0.9rem;
-    letter-spacing: 0.13em;
-  }
-
-  .brand-mark__subtitle {
-    display: none;
+    width: 118px;
+    height: 48px;
   }
 
   .header-tools {
@@ -1936,6 +1944,22 @@ p {
 
   .unit-identity__text small {
     font-size: 0.56rem;
+  }
+
+  .unit-identity.unit-identity--logo {
+    width: min(100%, 300px);
+    min-height: 104px;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0.8rem 1rem;
+  }
+
+  .unit-identity.unit-identity--logo .unit-identity__mark {
+    min-height: 76px;
+  }
+
+  .unit-identity.unit-identity--logo .unit-identity__mark img {
+    width: min(100%, 238px);
+    max-height: 78px;
   }
 
   .logo-pill {
