@@ -414,18 +414,7 @@ const pageTranslations = {
         selector: ".home-hero__primary",
         value: text("Unidades de negocio", "Business units")
       },
-      { selector: ".home-hero__secondary", value: text("Qui\u00e9nes somos", "About us") },
-      {
-        selector: ".home-hero__visual-title",
-        value: text("Imagen institucional Grupo DP", "Grupo DP institutional image")
-      },
-      {
-        selector: ".home-hero__visual-copy",
-        value: text(
-          "Planta, equipo, fachada corporativa o retrato institucional.",
-          "Plant, team, corporate facade or institutional portrait."
-        )
-      }
+      { selector: ".home-hero__secondary", value: text("Qui\u00e9nes somos", "About us") }
     ]
   },
   quienes: {
@@ -471,15 +460,15 @@ const pageTranslations = {
         value: text("Experiencia, crecimiento y diversificación.", "Experience, growth and diversification.")
       },
       {
-        selector: "main > section:nth-of-type(2) > .container > .split-layout > div:first-child p",
+        selector: "main > section:nth-of-type(2) .split-layout > div:first-child p",
         all: true,
         value: text(
           [
-            "Con base en Buenos Aires, Grupo DP desarrolla negocios vinculados a producción publicitaria, comercio exterior, packaging, autoservicio y soluciones especializadas. La diversidad de sus unidades no responde a una suma casual, sino a una visión empresarial que busca detectar oportunidades y transformarlas en proyectos sostenibles.",
+            "Con base en Buenos Aires, Grupo DP desarrolla negocios vinculados a la industria publicitaria, la arquitectura y el hogar, el comercio exterior, el packaging, los cajeros automáticos, la náutica y las soluciones de carga. La diversidad de sus unidades no responde a una suma casual, sino a una visión empresarial que busca detectar oportunidades y transformarlas en proyectos sostenibles.",
             "La combinación entre sensibilidad comercial, capacidad productiva y lectura operativa permite abordar desafíos muy distintos sin perder coherencia institucional."
           ],
           [
-            "Based in Buenos Aires, Grupo DP develops businesses linked to advertising production, foreign trade, packaging, self-service and specialized solutions. The diversity of its units is not accidental; it responds to a business vision that identifies opportunities and turns them into sustainable projects.",
+            "Based in Buenos Aires, Grupo DP develops businesses linked to the advertising industry, architecture and home, foreign trade, packaging, ATMs, nautical products and charging solutions. The diversity of its units is not accidental; it responds to a business vision that identifies opportunities and turns them into sustainable projects.",
             "The combination of commercial sensitivity, productive capacity and operational judgment makes it possible to face very different challenges without losing institutional coherence."
           ]
         )
@@ -549,20 +538,22 @@ const pageTranslations = {
         all: true,
         value: text(
           [
-            "Espacios, exhibición e identidad visual aplicada a entornos comerciales e institucionales.",
-            "Comercio exterior con enfoque operativo y articulación entre mercados estratégicos.",
-            "Soluciones alimentarias y packaging especializado con fuerte valor de presentación.",
-            "Cajeros automáticos, continuidad operativa y soluciones para redes extra bancarias.",
-            "Diseño y equipamiento con sensibilidad premium para el entorno náutico.",
-            "Estaciones de carga pensadas para sumar servicio y presencia en espacios de uso intensivo."
+            "Diseño, producción y colocación de materiales para la comunicación visual en todo el país.",
+            "Arquitectura moderna, refacciones, obras llave en mano y una línea de productos propios para el hogar.",
+            "Soluciones de comercio exterior con servicio personalizado, dinámico y seguro desde hace 20 años.",
+            "Máquinas de sellado, envases PET, envasado en latas de PET alimentario y desarrollo de productos.",
+            "Red propia de ATM en todo el país, administración de redes de terceros y billeteras virtuales.",
+            "Desarrollo y fabricación de accesorios para embarcaciones, y la torre energética Power Nautik.",
+            "Soluciones integrales de carga para celulares, tablets y otros dispositivos."
           ],
           [
-            "Spaces, displays and visual identity applied to commercial and institutional environments.",
-            "Foreign trade with an operational approach and coordination between strategic markets.",
-            "Food solutions and specialized packaging with strong presentation value.",
-            "Self-service, operational continuity and solutions for off-bank ATMs.",
-            "Design and equipment with a premium sensitivity for the nautical environment.",
-            "Charging stations built to add service and presence in high-use spaces."
+            "Design, production and installation of visual communication materials throughout the country.",
+            "Modern architecture, renovations, turnkey works and an own line of home products.",
+            "Foreign trade solutions with a personalized, dynamic and secure service for 20 years.",
+            "Sealing machines, PET containers, food-grade PET can filling and product development.",
+            "Own ATM network nationwide, third-party network management and digital wallets.",
+            "Development and manufacturing of boat accessories, and the Power Nautik energy tower.",
+            "Integrated charging solutions for phones, tablets and other devices."
           ]
         )
       }
@@ -630,13 +621,13 @@ const pageTranslations = {
           [
             "La experiencia en producción y resolución concreta fue el punto de partida del grupo.",
             "La identidad visual, la exhibición y los espacios comerciales ampliaron el alcance del negocio.",
-            "Nuevas unidades incorporaron packaging, comercio exterior y operación de autoservicio.",
+            "Nuevas unidades incorporaron packaging, comercio exterior y una red de cajeros automáticos.",
             "El grupo profundizó su presencia en propuestas premium y soluciones de alto valor agregado."
           ],
           [
             "Experience in production and hands-on execution was the group's starting point.",
             "Visual identity, display and commercial spaces expanded the reach of the business.",
-            "New units added packaging, foreign trade and self-service operations.",
+            "New units added packaging, foreign trade and an ATM network.",
             "The group deepened its presence in premium proposals and high-value solutions."
           ]
         )
@@ -647,7 +638,7 @@ const pageTranslations = {
         value: text("Expandirse también es dar dirección.", "Expanding also means setting direction.")
       },
       {
-        selector: "main > section:nth-of-type(3) > .container > .split-layout > div:first-child p",
+        selector: "main > section:nth-of-type(3) .split-layout > div:first-child p",
         value: text(
           "Hoy Grupo DP se proyecta como una compañía que articula especialidades distintas bajo una misma lógica: detectar oportunidades, construir estructura y sostener la calidad de cada desarrollo.",
           "Today, Grupo DP projects itself as a company that connects different specialties under one shared logic: identify opportunities, build structure and sustain the quality of every development."
@@ -661,13 +652,13 @@ const pageTranslations = {
           [
             "Industria publicitaria y ejecución comercial.",
             "Comercio exterior y articulación entre mercados.",
-            "Packaging, autoservicio y soluciones especializadas.",
+            "Packaging, cajeros automáticos y soluciones especializadas.",
             "Propuestas premium para segmentos específicos."
           ],
           [
             "Advertising industry and commercial execution.",
             "Foreign trade and market coordination.",
-            "Packaging, self-service and specialized solutions.",
+            "Packaging, ATMs and specialized solutions.",
             "Premium proposals for specific segments."
           ]
         )
@@ -749,7 +740,7 @@ const pageTranslations = {
         value: text("La calidad también se mide en el entorno.", "Quality is also measured by its environment.")
       },
       {
-        selector: "main > section:nth-of-type(3) > .container > .split-layout > div:first-child p",
+        selector: "main > section:nth-of-type(3) .split-layout > div:first-child p",
         value: text(
           "Nuestro enfoque busca equilibrar productividad, cuidado del entorno y mejora permanente, entendiendo que la sustentabilidad no es una capa adicional sino una parte esencial de la gestión.",
           "Our approach seeks to balance productivity, environmental care and constant improvement, understanding that sustainability is not an added layer but an essential part of management."
@@ -819,7 +810,7 @@ const pageTranslations = {
         value: text("Contar lo que hacemos también construye identidad.", "Sharing what we do also builds identity.")
       },
       {
-        selector: "main > section:nth-of-type(3) > .container > .split-layout > div:first-child p",
+        selector: "main > section:nth-of-type(3) .split-layout > div:first-child p",
         value: text(
           "La sección News acompaña el crecimiento del grupo desde una mirada editorial: poner en contexto los proyectos, dar visibilidad a los desarrollos y compartir la evolución de cada unidad en el momento adecuado.",
           "The News section supports the group's growth from an editorial point of view: putting projects in context, giving visibility to developments and sharing the evolution of each unit at the right time."
