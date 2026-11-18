@@ -12,6 +12,7 @@ const routes = {
   news: "news/",
   contacto: "contacto/",
   dp: "unidades/dp-industria-publicitaria/",
+  dphome: "unidades/dp-home/",
   comex: "unidades/comex/",
   pack: "unidades/pack-gourmet/",
   efectivo: "unidades/efectivo-365/",
@@ -27,6 +28,7 @@ const navSections = {
   news: "institucional",
   contacto: "contacto",
   dp: "unidades",
+  dphome: "unidades",
   comex: "unidades",
   pack: "unidades",
   efectivo: "unidades",
@@ -43,38 +45,78 @@ const brands = [
     label: "DP Industria Publicitaria",
     unitMeta: [
       {
-        value: text("Retail y bancos", "Retail + Banking"),
+        value: text("Diseño a colocación", "Design to installation"),
         label: text(
-          "Aplicaciones para puntos de contacto, exhibición y atención.",
-          "Applications for customer-facing, display and service environments."
+          "Creación, materiales, producción y colocación en cualquier punto del país.",
+          "Creation, materials, production and installation anywhere in the country."
         )
       },
       {
         value: text("Llave en mano", "Turnkey"),
         label: text(
-          "Diseño, fabricación y montaje dentro de un mismo recorrido.",
-          "Design, fabrication and installation within the same project flow."
+          "Obras completas, de la idea a la entrega, dentro de un mismo recorrido.",
+          "Complete works, from idea to delivery, within the same project flow."
         )
       },
       {
         value: text("Láser + señalética", "Laser + Signage"),
         label: text(
-          "Corte, letras corporeas y piezas especiales de terminación.",
+          "Corte, letras corpóreas y piezas especiales de terminación.",
           "Cutting, dimensional lettering and special finishing pieces."
         )
       }
     ],
     navDescription: text(
-      "Identidad, exhibición y espacios comerciales",
-      "Identity, display and commercial spaces"
+      "Comunicación visual: diseño, producción y colocación",
+      "Visual communication: design, production and installation"
     ),
     marqueeSector: text("Industria y comunicación", "Industry and communication"),
     logo: "logos/SVG/03_DP_INDUSTRIA_PUBLICITARIA.svg",
     marqueeBg: "#171a1d",
     marqueeText: "#ffffff",
     marqueeDescription: text(
-      "Identidad, exhibición y soluciones integrales para espacios comerciales e institucionales.",
-      "Identity, display and integrated solutions for commercial and institutional spaces."
+      "Diseño, producción, logística y colocación de materiales para la comunicación visual en todo el país.",
+      "Design, production, logistics and installation of visual communication materials throughout the country."
+    )
+  },
+  {
+    key: "dphome",
+    path: routes.dphome,
+    label: "DP Home",
+    unitMeta: [
+      {
+        value: text("Arquitectura moderna", "Modern architecture"),
+        label: text(
+          "Proyectos de arquitectura con una mirada actual.",
+          "Architecture projects with a contemporary approach."
+        )
+      },
+      {
+        value: text("Refacciones", "Renovations"),
+        label: text(
+          "Refacciones y obras llave en mano.",
+          "Renovations and turnkey works."
+        )
+      },
+      {
+        value: text("Línea propia", "Own line"),
+        label: text(
+          "Mesas de arrime, porta rollos, porta toallas y carritos auxiliares.",
+          "Console tables, roll holders, towel holders and utility carts."
+        )
+      }
+    ],
+    navDescription: text(
+      "Arquitectura moderna, refacciones y productos propios",
+      "Modern architecture, renovations and own products"
+    ),
+    marqueeSector: text("Arquitectura y hogar", "Architecture and home"),
+    logo: "logos/SVG/02_DP_HOME.svg",
+    marqueeBg: "#171a1d",
+    marqueeText: "#ffffff",
+    marqueeDescription: text(
+      "Arquitectura moderna, refacciones, obras llave en mano y una línea de productos propios para el hogar.",
+      "Modern architecture, renovations, turnkey works and an own line of home products."
     )
   },
   {
@@ -83,38 +125,38 @@ const brands = [
     label: "COMEX",
     unitMeta: [
       {
-        value: text("Importación / Exportación", "Import / Export"),
+        value: text("20 años", "20 years"),
         label: text(
-          "Operaciones internacionales leidas con criterio comercial y operativo.",
-          "International operations managed with commercial and operational judgment."
+          "Soluciones de comercio exterior con servicio personalizado, dinámico y seguro.",
+          "Foreign trade solutions with a personalized, dynamic and secure service."
         )
       },
       {
-        value: text("US | CN | PT | BR | ES", "US | CN | PT | BR | ES"),
+        value: text("Importación + distribución", "Import + distribution"),
         label: text(
-          "Mercados estrategicos priorizados por la unidad.",
-          "Strategic markets prioritized by the unit."
+          "Comunicación visual (acrílicos y PVC espumado) y cargadores HUB.",
+          "Visual communication materials (acrylics and foamed PVC) and HUB chargers."
         )
       },
       {
-        value: text("Documentación + logística", "Docs + Logistics"),
+        value: text("Despacho + seguro", "Customs + insurance"),
         label: text(
-          "Coordinacion documental, administrativa y logística.",
-          "Document, administrative and logistics coordination."
+          "Despacho aduanero, transporte internacional y seguro de mercaderías.",
+          "Customs clearance, international transport and cargo insurance."
         )
       }
     ],
     navDescription: text(
-      "Comercio exterior y articulación operativa",
-      "Foreign trade and operational coordination"
+      "Comercio exterior: importación, despacho y logística",
+      "Foreign trade: import, customs and logistics"
     ),
     marqueeSector: text("Comercio exterior", "Foreign trade"),
     logo: "logos/SVG/04_DP_COMEX.svg",
     marqueeBg: "#171a1d",
     marqueeText: "#ffffff",
     marqueeDescription: text(
-      "Gestión integral para operaciones internacionales y vínculo con mercados estratégicos.",
-      "End-to-end management for international operations and strategic market connections."
+      "Hace 20 años brinda soluciones de comercio exterior con servicio personalizado, dinámico y seguro.",
+      "For 20 years providing foreign trade solutions with a personalized, dynamic and secure service."
     )
   },
   {
@@ -123,38 +165,38 @@ const brands = [
     label: "Pack Gourmet",
     unitMeta: [
       {
-        value: text("Packaging B2B", "B2B Packaging"),
+        value: text("Packaging", "Packaging"),
         label: text(
-          "Trae tu producto y lo envasamos con una presentación más visible.",
-          "Bring your product and we package it with a more visible presentation."
+          "Máquinas de sellado, envases PET y soluciones de packaging.",
+          "Sealing machines, PET containers and packaging solutions."
         )
       },
       {
-        value: text("Líneas propias", "Own Lines"),
+        value: text("Envasado", "Filling"),
         label: text(
-          "Espacio abierto para marcas y desarrollos propios.",
-          "Open ground for in-house brands and product developments."
+          "Líquidos y sólidos en latas de PET alimentario.",
+          "Liquids and solids in food-grade PET cans."
         )
       },
       {
-        value: text("Impacto en góndola", "Shelf Impact"),
+        value: text("Productos propios", "Own products"),
         label: text(
-          "Formato sellado, exhibible y adaptable a distintos contenidos.",
-          "A sealed, display-ready format adaptable to different contents."
+          "Agua four pack y traguitos preparados para eventos.",
+          "Four-pack water and ready-made shots for events."
         )
       }
     ],
     navDescription: text(
-      "Soluciones alimentarias y packaging especializado",
-      "Food solutions and specialized packaging"
+      "Packaging, envasado y productos propios",
+      "Packaging, filling and own products"
     ),
-    marqueeSector: text("Soluciones alimentarias", "Food solutions"),
+    marqueeSector: text("Packaging y envasado", "Packaging and filling"),
     logo: "logos/SVG/06_DP_PACK_GOURMET.svg",
     marqueeBg: "#171a1d",
     marqueeText: "#ffffff",
     marqueeDescription: text(
-      "Packaging especializado para terceros y líneas propias con foco en presentación.",
-      "Specialized packaging for third parties and in-house lines with a presentation-first approach."
+      "Máquinas de sellado, envases PET, envasado en latas de PET alimentario y desarrollo de productos.",
+      "Sealing machines, PET containers, food-grade PET can filling and product development."
     )
   },
   {
@@ -163,38 +205,38 @@ const brands = [
     label: "Efectivo 365",
     unitMeta: [
       {
-        value: text("Red de cajeros", "ATM Network"),
+        value: text("Red propia", "Own network"),
         label: text(
-          "Compra, venta, consignación y despliegue de equipos.",
-          "Purchase, sale, consignment and rollout of ATM units."
+          "ATM en estaciones de servicio y puntos estratégicos de todo el país.",
+          "ATMs at service stations and strategic points across the country."
         )
       },
       {
-        value: text("Monitoreo", "Monitoring"),
+        value: text("+30 años", "30+ years"),
         label: text(
-          "Software, soporte técnico y continuidad operativa.",
-          "Software, technical support and operational continuity."
+          "Experiencia en servicios integrales del mundo ATM.",
+          "Experience in end-to-end ATM services."
         )
       },
       {
-        value: text("Servicio en campo", "Field Service"),
+        value: text("Billeteras virtuales", "Digital wallets"),
         label: text(
-          "Instalación, logística y mantenimiento en campo.",
-          "Installation, logistics and on-site maintenance."
+          "Desarrollo de billeteras virtuales y administración de redes de terceros.",
+          "Digital wallet development and third-party network management."
         )
       }
     ],
     navDescription: text(
-      "Cajeros automáticos y operación de red",
-      "Self-service and ATM operations"
+      "Red de ATM y servicios integrales",
+      "ATM network and end-to-end services"
     ),
     marqueeSector: text("Cajeros automáticos", "ATMs"),
     logo: "logos/SVG/05_DP_EFECTIVO_365.svg",
     marqueeBg: "#171a1d",
     marqueeText: "#ffffff",
     marqueeDescription: text(
-      "Comercialización, instalación, mantenimiento y operación de cajeros extra bancarios.",
-      "Commercialization, installation, maintenance and operation of off-bank ATMs."
+      "Red propia de ATM en todo el país, administración de redes de terceros y billeteras virtuales.",
+      "Own ATM network nationwide, third-party network management and digital wallets."
     )
   },
   {
@@ -203,38 +245,38 @@ const brands = [
     label: "Nautik",
     unitMeta: [
       {
-        value: text("Náutica premium", "Premium Marine"),
+        value: text("Accesorios náuticos", "Nautical accessories"),
         label: text(
-          "Lenguaje cuidado para embarcaciones, cubiertas y marinas.",
-          "Refined language for boats, decks and marina environments."
+          "Desarrollo y fabricación de todo tipo de accesorios para embarcaciones.",
+          "Development and manufacturing of all kinds of boat accessories."
         )
       },
       {
-        value: text("Piezas a medida", "Custom Pieces"),
+        value: text("Piezas propias", "In-house pieces"),
         label: text(
-          "Tableros, puertas, divisiones y accesorios a medida.",
-          "Custom panels, doors, partitions and onboard accessories."
+          "Tableros, nombres con luz, portacápsulas, estantes, puertas y muebles.",
+          "Panels, illuminated names, capsule holders, shelves, doors and furniture."
         )
       },
       {
-        value: text("Marina Tower", "Marina Tower"),
+        value: text("Power Nautik", "Power Nautik"),
         label: text(
-          "Producto destacado con ficha técnica todavía en desarrollo.",
-          "Featured product with a technical sheet still under development."
+          "Torre energética de acero inoxidable con tablero estanco IP65.",
+          "Stainless steel energy tower with IP65 watertight panel."
         )
       }
     ],
     navDescription: text(
-      "Diseño y equipamiento para embarcaciones",
-      "Design and equipment for vessels"
+      "Accesorios para embarcaciones y torre Power Nautik",
+      "Boat accessories and the Power Nautik tower"
     ),
     marqueeSector: text("Soluciones náuticas", "Nautical solutions"),
     logo: "logos/SVG/08_DP_NAUTIK.svg",
     marqueeBg: "#171a1d",
     marqueeText: "#ffffff",
     marqueeDescription: text(
-      "Diseño, restyling y piezas especiales para embarcaciones y marinas premium.",
-      "Design, restyling and special parts for premium boats and marinas."
+      "Desarrollo y fabricación de accesorios para embarcaciones y torres energéticas para marinas.",
+      "Development and manufacturing of boat accessories and energy towers for marinas."
     )
   },
   {
@@ -243,52 +285,41 @@ const brands = [
     label: "Power Station",
     unitMeta: [
       {
-        value: text("Torre de carga", "Charging Tower"),
+        value: text("Torres con locker", "Towers with locker"),
         label: text(
-          "Producto insignia para espacios de alto tránsito.",
-          "Flagship product for high-traffic environments."
+          "Carga para celulares, tablets y otros dispositivos.",
+          "Charging for phones, tablets and other devices."
         )
       },
       {
-        value: text("Uso flexible", "Flexible Use"),
+        value: text("Cable 3 en 1", "3-in-1 cable"),
         label: text(
-          "Ferias, retail, corporativo y áreas de espera.",
-          "Fairs, retail, corporate spaces and waiting areas."
+          "Un solo cable para cargar distintos dispositivos.",
+          "A single cable to charge different devices."
         )
       },
       {
-        value: text("Base técnica", "Technical Base"),
+        value: text("HUB de 6 salidas", "6-outlet HUB"),
         label: text(
-          "Marca preparada para evolucionar desde un equipo concreto.",
-          "A brand ready to evolve from one concrete technical product."
+          "Enchufe de pared para cargar varios equipos a la vez.",
+          "Wall plug to charge several devices at once."
         )
       }
     ],
     navDescription: text(
-      "Estaciones de carga para espacios de alto tránsito",
-      "Charging stations for high-traffic spaces"
+      "Soluciones integrales de carga para dispositivos",
+      "Integrated charging solutions for devices"
     ),
     marqueeSector: text("Soluciones de carga", "Charging solutions"),
     logo: "logos/SVG/07_DP_POWER_STATION.svg",
     marqueeBg: "#171a1d",
     marqueeText: "#ffffff",
     marqueeDescription: text(
-      "Torres de carga para celulares pensadas para servicio, utilidad y presencia.",
-      "Cell-phone charging towers built for service, utility and presence."
+      "Torres con locker, cable 3 en 1, HUB de 6 salidas y desarrollos especiales de carga.",
+      "Towers with locker, 3-in-1 cable, 6-outlet HUB and special charging developments."
     )
   }
 ];
-
-const homeLogo = {
-  key: "dp-home",
-  label: "DP Home",
-  logo: "logos/SVG/02_DP_HOME.svg",
-  marqueeBg: "#171a1d",
-  marqueeText: "#ffffff",
-  marqueeSector: text("Unidad de Grupo DP", "Grupo DP unit")
-};
-
-const marqueeBrands = [homeLogo, ...brands];
 
 const chromeCopy = {
   es: {
@@ -311,10 +342,10 @@ const chromeCopy = {
     footerInstitutional: "Institucional",
     footerBusiness: "Unidades de negocio",
     footerContact: "Contacto",
-    footerLocation: "[Placeholder] Buenos Aires, Argentina",
-    footerEmail: "[Placeholder] info@grupodp.com.ar",
-    footerPhone: "[Placeholder] +54 11 0000 0000",
-    footerHours: "[Placeholder] Lunes a viernes de 9 a 18 h",
+    footerLocation: "Agustín de Vedia 2180, Tablada, Buenos Aires, Argentina",
+    footerEmail: "gestion@grupodp.com.ar",
+    footerPhone: "Tel.: +54 11 2121-2020 / 0404",
+    footerWhatsapp: "WhatsApp: +54 9 11 3218-8885",
     footerChannel: "Canal institucional",
     footerTagline: "Industria, diseño y soluciones especializadas."
   },
@@ -338,10 +369,10 @@ const chromeCopy = {
     footerInstitutional: "Institutional",
     footerBusiness: "Business units",
     footerContact: "Contact",
-    footerLocation: "[Placeholder] Buenos Aires, Argentina",
-    footerEmail: "[Placeholder] info@grupodp.com.ar",
-    footerPhone: "[Placeholder] +54 11 0000 0000",
-    footerHours: "[Placeholder] Monday to Friday, 9 am to 6 pm",
+    footerLocation: "Agustín de Vedia 2180, Tablada, Buenos Aires, Argentina",
+    footerEmail: "gestion@grupodp.com.ar",
+    footerPhone: "Phone: +54 11 2121-2020 / 0404",
+    footerWhatsapp: "WhatsApp: +54 9 11 3218-8885",
     footerChannel: "Institutional channel",
     footerTagline: "Industry, design and specialized solutions."
   }
@@ -355,8 +386,8 @@ const pageTranslations = {
         "Grupo DP | Industry, design and specialized solutions"
       ),
       description: text(
-        "Grupo DP es una compa\u00f1\u00eda argentina que articula unidades de negocio vinculadas a industria, comercio exterior, packaging, autoservicio y soluciones especializadas.",
-        "Grupo DP is an Argentine company that connects business units linked to industry, foreign trade, packaging, self-service and specialized solutions."
+        "Grupo DP es una compa\u00f1\u00eda argentina que articula unidades de negocio vinculadas a industria, arquitectura y hogar, comercio exterior, packaging, cajeros autom\u00e1ticos, n\u00e1utica y soluciones especializadas.",
+        "Grupo DP is an Argentine company that connects business units linked to industry, architecture and home, foreign trade, packaging, ATMs, nautical and specialized solutions."
       ),
       ogDescription: text(
         "Industria, dise\u00f1o y soluciones especializadas desde Buenos Aires, Argentina.",
@@ -375,8 +406,8 @@ const pageTranslations = {
       {
         selector: ".home-hero__lead",
         value: text(
-          "Grupo DP re\u00fane seis unidades con perfiles complementarios en industria, comercio exterior, packaging, autoservicio, n\u00e1utica y soluciones de carga desde Buenos Aires, Argentina.",
-          "Grupo DP brings together six complementary units in industry, foreign trade, packaging, self-service, nautical solutions and charging systems from Buenos Aires, Argentina."
+          "Grupo DP re\u00fane siete unidades con perfiles complementarios en industria, arquitectura y hogar, comercio exterior, packaging, cajeros autom\u00e1ticos, n\u00e1utica y soluciones de carga desde Buenos Aires, Argentina.",
+          "Grupo DP brings together seven complementary units in industry, architecture and home, foreign trade, packaging, ATMs, nautical solutions and charging systems from Buenos Aires, Argentina."
         )
       },
       {
@@ -845,7 +876,7 @@ const pageTranslations = {
         value: text("Una mirada amplia sobre distintos sectores.", "A broad view across different sectors.")
       },
       {
-        selector: "main > section:nth-of-type(2) > .container > .split-layout > div:first-child p",
+        selector: "main > section:nth-of-type(2) .split-layout > div:first-child p",
         value: text(
           "Si querés conocer más sobre una unidad de negocio, conversar sobre una oportunidad o ponerte en contacto con el grupo, podés hacerlo a través de nuestros canales institucionales.",
           "If you want to learn more about a business unit, discuss an opportunity or get in touch with the group, you can do so through our institutional channels."
@@ -853,17 +884,23 @@ const pageTranslations = {
       },
       { selector: "main > section:nth-of-type(2) .panel h3", value: text("Canales disponibles", "Available channels") },
       {
-        selector: "main > section:nth-of-type(2) .list-clean li",
+        selector: "main > section:nth-of-type(2) .list-clean li > span",
         all: true,
         value: text(
           [
-            "Instagram: @dpindustriapublicitaria",
-            "Ubicación: Buenos Aires, Argentina.",
+            "Correo electrónico:",
+            "WhatsApp:",
+            "Teléfono:",
+            "Dirección:",
+            "Instagram:",
             "Consultas vinculadas a todas las unidades del grupo."
           ],
           [
-            "Instagram: @dpindustriapublicitaria",
-            "Location: Buenos Aires, Argentina.",
+            "Email:",
+            "WhatsApp:",
+            "Phone:",
+            "Address:",
+            "Instagram:",
             "Inquiries related to every unit within the group."
           ]
         )
@@ -877,8 +914,8 @@ const pageTranslations = {
         selector: "main > section:nth-of-type(3) .contact-grid h3",
         all: true,
         value: text(
-          ["Industria y exhibición", "Comercio exterior", "Soluciones alimentarias", "Cajeros automáticos", "Soluciones náuticas", "Carga y energía"],
-          ["Industry and display", "Foreign trade", "Food solutions", "Self-service", "Nautical", "Charging and energy"]
+          ["Industria y exhibición", "Arquitectura y hogar", "Comercio exterior", "Soluciones alimentarias", "Cajeros automáticos", "Soluciones náuticas", "Carga y energía"],
+          ["Industry and display", "Architecture and home", "Foreign trade", "Food solutions", "ATMs", "Nautical solutions", "Charging and energy"]
         )
       },
       { selector: "main > section:nth-of-type(3) .button-row .button", value: text("Ir a Instagram", "Go to Instagram") }
@@ -888,8 +925,8 @@ const pageTranslations = {
     meta: {
       title: text("DP Industria Publicitaria | Grupo DP", "DP Industria Publicitaria | Grupo DP"),
       description: text(
-        "DP Industria Publicitaria diseña, desarrolla, produce y coordina la logística de materiales para comunicación visual en todo el país.",
-        "DP Industria Publicitaria designs, develops, produces and coordinates logistics for visual communication materials throughout the country."
+        "DP Industria Publicitaria diseña, desarrolla, produce y gestiona la logística de materiales para comunicación visual, con colocación en cualquier punto del país.",
+        "DP Industria Publicitaria designs, develops, produces and manages the logistics of visual communication materials, with installation anywhere in the country."
       )
     },
     texts: [
@@ -897,13 +934,13 @@ const pageTranslations = {
       { selector: "main > section:nth-of-type(1) .eyebrow", value: text("Unidad de negocio", "Business unit") },
       {
         selector: "main > section:nth-of-type(1) h1",
-        value: text("Comunicación visual de punta a punta.", "End-to-end visual communication.")
+        value: text("Comunicación visual, del diseño a la colocación.", "Visual communication, from design to installation.")
       },
       {
         selector: "main > section:nth-of-type(1) .lead",
         value: text(
-          "DP Industria Publicitaria se especializa en el diseño, desarrollo, producción y logística de materiales para la comunicación visual.",
-          "DP Industria Publicitaria specializes in the design, development, production and logistics of visual communication materials."
+          "Diseñamos, desarrollamos, producimos y gestionamos la logística de materiales para la comunicación visual, con colocación en cualquier punto del país.",
+          "We design, develop, produce and manage the logistics of visual communication materials, with installation anywhere in the country."
         )
       },
       {
@@ -928,22 +965,21 @@ const pageTranslations = {
       { selector: "main > section:nth-of-type(2) .eyebrow", value: text("Qué hacemos", "What we do") },
       {
         selector: "main > section:nth-of-type(2) h2",
-        value: text(
-          "Diseño, producción y logística para cada campaña.",
-          "Design, production and logistics for every campaign."
-        )
+        value: text("Todo el proyecto, con un mismo equipo.", "The whole project, with a single team.")
       },
       {
-        selector: "main > section:nth-of-type(2) > .container > .split-layout > div:first-child p",
+        selector: "main > section:nth-of-type(2) .split-layout > div:first-child p",
         all: true,
         value: text(
           [
-            "La unidad contempla todos los aspectos del proyecto: desde su creación y desarrollo conceptual hasta la elección de los materiales más convenientes, su elaboración y la colocación final.",
-            "Su equipo combina experiencia, capacitación e investigación permanente para adaptar recursos y servicios a las necesidades de cada mercado, campaña y punto de instalación."
+            "Abarcamos todos los aspectos del proyecto: desde su creación, pasando por la elección de los materiales más convenientes y su elaboración, hasta la colocación en cualquier punto del país.",
+            "La calidad de nuestro experimentado equipo de trabajo respalda la confiabilidad de cada producto. La capacitación y la investigación permanentes nos permiten adaptar recursos y servicios a los cambios que exige el mercado actual.",
+            "Mantenemos una atención diferencial en cada trabajo y damos lo mejor de nosotros para lograr los resultados más óptimos en cada campaña que emprenden nuestros clientes."
           ],
           [
-            "The unit covers every part of the project: from creation and conceptual development to choosing the most suitable materials, producing them and completing final installation.",
-            "Its team combines experience, training and continuous research to adapt resources and services to each market, campaign and installation point."
+            "We cover every aspect of the project: from creation, through choosing the most suitable materials and producing them, to installation anywhere in the country.",
+            "The quality of our experienced team supports the reliability of every product. Ongoing training and research allow us to adapt our resources and services to the changes demanded by today's market.",
+            "We keep a differentiated level of care in every job and do our best to achieve the optimal results in every campaign our clients undertake."
           ]
         )
       },
@@ -953,16 +989,16 @@ const pageTranslations = {
         all: true,
         value: text(
           [
+            "Proceso productivo, diseño gráfico e industrial, tecnología y equipamiento.",
             "Imagen institucional, gráfica y decoración comercial.",
-            "Soporte bancario y soluciones para espacios de atención.",
-            "Corte y grabado láser, letras corpóreas y piezas especiales.",
-            "Obras llave en mano con logística y colocación en todo el país."
+            "Letras corpóreas, corte y grabado láser, tótems y exhibidores.",
+            "Stands, support banking y obras llave en mano."
           ],
           [
+            "Production process, graphic and industrial design, technology and equipment.",
             "Institutional identity, graphics and commercial decoration.",
-            "Banking support and solutions for service spaces.",
-            "Laser cutting and engraving, dimensional lettering and special pieces.",
-            "Turnkey works with logistics and installation throughout the country."
+            "Dimensional lettering, laser cutting and engraving, totems and displays.",
+            "Stands, support banking and turnkey works."
           ]
         )
       },
@@ -1000,38 +1036,6 @@ const pageTranslations = {
             "End-to-end management from the first survey to final delivery."
           ]
         )
-      },
-      { selector: "main > section:nth-of-type(4) .eyebrow", value: text("Proyectos", "Projects") },
-      {
-        selector: "main > section:nth-of-type(4) h2",
-        value: text(
-          "Recursos preparados para hacerse visibles.",
-          "Resources prepared to become visible."
-        )
-      },
-      {
-        selector: "main > section:nth-of-type(4) .media-grid strong",
-        all: true,
-        value: text(
-          ["Proceso productivo", "Tótems y exhibidores", "Stands y equipamiento"],
-          ["Production process", "Totems and displays", "Stands and equipment"]
-        )
-      },
-      {
-        selector: "main > section:nth-of-type(4) .media-grid span",
-        all: true,
-        value: text(
-          [
-            "Creación, materiales, elaboración, logística y colocación.",
-            "Soportes para ordenar, destacar y presentar productos o servicios.",
-            "Diseño gráfico e industrial aplicado con tecnología y equipamiento propio."
-          ],
-          [
-            "Creation, materials, production, logistics and installation.",
-            "Supports to organize, highlight and present products or services.",
-            "Graphic and industrial design applied with in-house technology and equipment."
-          ]
-        )
       }
     ]
   },
@@ -1039,8 +1043,8 @@ const pageTranslations = {
     meta: {
       title: text("COMEX | Grupo DP", "COMEX | Grupo DP"),
       description: text(
-        "COMEX brinda una mirada integral sobre comercio exterior, articulando gestión operativa, documentación y vinculación con mercados estratégicos.",
-        "COMEX provides an end-to-end foreign trade perspective, coordinating operations, documentation and strategic market connections."
+        "COMEX brinda desde hace 20 años soluciones de comercio exterior con servicio personalizado, dinámico y seguro: importación y distribución, despacho aduanero, transporte internacional y seguro de mercaderías.",
+        "For 20 years COMEX has provided foreign trade solutions with a personalized, dynamic and secure service: import and distribution, customs clearance, international transport and cargo insurance."
       )
     },
     texts: [
@@ -1048,21 +1052,21 @@ const pageTranslations = {
       { selector: "main > section:nth-of-type(1) .eyebrow", value: text("Unidad de negocio", "Business unit") },
       {
         selector: "main > section:nth-of-type(1) h1",
-        value: text("Comercio exterior con visión integral.", "Foreign trade with an end-to-end vision.")
+        value: text("Veinte años de comercio exterior.", "Twenty years of foreign trade.")
       },
       {
         selector: "main > section:nth-of-type(1) .lead",
         value: text(
-          "COMEX acompaña operaciones internacionales desde una mirada práctica, ordenada y orientada a facilitar vínculos con mercados estratégicos.",
-          "COMEX supports international operations from a practical, structured point of view focused on enabling connections with strategic markets."
+          "Desde hace 20 años brindamos soluciones de comercio exterior a través de un servicio personalizado, dinámico y seguro.",
+          "For 20 years we have provided foreign trade solutions through a personalized, dynamic and secure service."
         )
       },
       {
         selector: "main > section:nth-of-type(1) .tag",
         all: true,
         value: text(
-          ["Gestión integral", "Coordinación operativa", "Mercados estratégicos", "Visión internacional"],
-          ["End-to-end management", "Operational coordination", "Strategic markets", "International outlook"]
+          ["Importación y distribución", "Despacho aduanero", "Transporte internacional", "Seguro de mercaderías"],
+          ["Import and distribution", "Customs clearance", "International transport", "Cargo insurance"]
         )
       },
       {
@@ -1076,19 +1080,22 @@ const pageTranslations = {
       { selector: "main > section:nth-of-type(2) .eyebrow", value: text("Qué hacemos", "What we do") },
       {
         selector: "main > section:nth-of-type(2) h2",
-        value: text("Comercio exterior con una gestión más clara.", "Foreign trade with clearer management.")
+        value: text(
+          "Una gestión de comercio exterior cercana y confiable.",
+          "Close, reliable foreign trade management."
+        )
       },
       {
-        selector: "main > section:nth-of-type(2) > .container > .split-layout > div:first-child p",
+        selector: "main > section:nth-of-type(2) .split-layout > div:first-child p",
         all: true,
         value: text(
           [
-            "La unidad trabaja sobre procesos de importación y exportación entendiendo que una buena operación depende tanto del negocio como de la coordinación entre tiempos, actores, documentación y logística.",
-            "Su enfoque integra criterio comercial y orden operativo para acompañar decisiones con una mirada más amplia sobre el recorrido de cada operación."
+            "Acompañamos cada operación con un servicio personalizado, dinámico y seguro, desde el asesoramiento inicial del proyecto hasta la entrega de la mercadería.",
+            "Importamos y distribuimos materiales de comunicación visual y cargadores de celular, y buscamos productos a pedido con proveedores homologados en el exterior."
           ],
           [
-            "The unit works on import and export processes understanding that a good operation depends on the business as much as on the coordination between timelines, stakeholders, documentation and logistics.",
-            "Its approach integrates commercial judgment and operational order to support decisions with a broader view of each operation's path."
+            "We support every operation with a personalized, dynamic and secure service, from the initial project advice to the delivery of the goods.",
+            "We import and distribute visual communication materials and mobile phone chargers, and source products on request through approved suppliers abroad."
           ]
         )
       },
@@ -1098,60 +1105,69 @@ const pageTranslations = {
         all: true,
         value: text(
           [
-            "Lectura integral de la operación.",
-            "Coordinación documental y administrativa.",
-            "Articulación logística según destino y origen.",
-            "Vinculación con mercados estratégicos."
+            "Servicio personalizado para cada proyecto.",
+            "Proveedores homologados en el exterior.",
+            "Seguridad jurídica aduanera.",
+            "Gestión integral, del origen al destino."
           ],
           [
-            "End-to-end reading of the operation.",
-            "Document and administrative coordination.",
-            "Logistics coordination according to destination and origin.",
-            "Connection with strategic markets."
+            "Personalized service for every project.",
+            "Approved suppliers abroad.",
+            "Legal certainty in customs matters.",
+            "End-to-end management, from origin to destination."
           ]
         )
       },
-      { selector: "main > section:nth-of-type(3) .eyebrow", value: text("Mercados", "Markets") },
+      { selector: "main > section:nth-of-type(3) .eyebrow", value: text("Auditoría", "Audits") },
       {
         selector: "main > section:nth-of-type(3) h2",
-        value: text("Mercados estratégicos.", "Strategic markets.")
+        value: text(
+          "Auditoría de empresas en Estados Unidos y China.",
+          "Company audits in the United States and China."
+        )
       },
       {
         selector: "main > section:nth-of-type(3) .market-grid h3",
         all: true,
-        value: text(["Estados Unidos", "China", "Portugal", "Brasil", "España"], ["United States", "China", "Portugal", "Brazil", "Spain"])
+        value: text(["Estados Unidos", "China"], ["United States", "China"])
       },
       {
         selector: "main > section:nth-of-type(3) .market-grid p",
         all: true,
         value: text(
           [
-            "Un mercado relevante para oportunidades comerciales y articulación internacional.",
-            "Origen estratégico para abastecimiento, escala y búsqueda de proveedores.",
-            "Vínculo con Europa y operaciones de perfil especializado.",
-            "Mercado regional clave por cercanía, escala y dinamismo comercial.",
-            "Destino y origen con afinidad cultural y proyección comercial."
+            "Auditoría de empresas para validar proveedores antes de operar.",
+            "Auditoría de empresas para validar proveedores antes de operar."
           ],
           [
-            "A relevant market for commercial opportunities and international coordination.",
-            "A strategic origin for sourcing, scale and supplier search.",
-            "A bridge to Europe and specialized operations.",
-            "A key regional market because of proximity, scale and commercial dynamism.",
-            "Destination and origin with cultural affinity and commercial projection."
+            "Company audits to validate suppliers before operating.",
+            "Company audits to validate suppliers before operating."
           ]
         )
       },
       { selector: "main > section:nth-of-type(4) .eyebrow", value: text("Servicios", "Services") },
       {
         selector: "main > section:nth-of-type(4) h2",
-        value: text("Gestión de punta a punta.", "End-to-end management.")
+        value: text("Soluciones de punta a punta.", "End-to-end solutions.")
       },
       {
         selector: "main > section:nth-of-type(4) .service-grid h3",
         all: true,
         value: text(
-          ["Gestión integral", "Documentación", "Logística", "Importación y exportación", "Vinculación comercial"],
-          ["End-to-end management", "Documentation", "Logistics", "Import and export", "Commercial linking"]
+          [
+            "Importación y distribución",
+            "Asesoría y búsqueda de productos",
+            "Certificaciones y seguridad jurídica",
+            "Despacho aduanero",
+            "Transporte y seguro"
+          ],
+          [
+            "Import and distribution",
+            "Advisory and product sourcing",
+            "Certifications and legal certainty",
+            "Customs clearance",
+            "Transport and insurance"
+          ]
         )
       },
       {
@@ -1159,18 +1175,18 @@ const pageTranslations = {
         all: true,
         value: text(
           [
-            "Coordinación general para ordenar las distintas etapas de una operación internacional.",
-            "Organización administrativa y seguimiento de procesos documentales.",
-            "Lectura del recorrido operativo y articulación entre necesidades de transporte y tiempos.",
-            "Acompañamiento estratégico para operaciones de entrada o salida de productos.",
-            "Conexión entre oportunidades locales y actores internacionales relevantes."
+            "Materiales de comunicación visual (acrílicos y PVC espumado), cargadores de celular HUB y cables 3 en 1.",
+            "Servicio internacional, asesoría en proyectos y búsqueda de productos a pedido con proveedores homologados.",
+            "Gestión de certificaciones e intervenciones ante organismos, con seguridad jurídica aduanera.",
+            "Gestión del despacho de mercaderías para que cada operación avance en tiempo y forma.",
+            "Transporte internacional y seguro de mercaderías para proteger cada envío."
           ],
           [
-            "Overall coordination to organize the different stages of an international operation.",
-            "Administrative organization and follow-up of documentary processes.",
-            "Operational-route reading and coordination between transport needs and timelines.",
-            "Strategic support for inbound or outbound product operations.",
-            "Connection between local opportunities and relevant international players."
+            "Visual communication materials (acrylics and foamed PVC), HUB mobile chargers and 3-in-1 cables.",
+            "International service, project advisory and on-request product sourcing through approved suppliers.",
+            "Management of certifications and procedures before regulatory bodies, with legal certainty in customs matters.",
+            "Customs clearance management so that every operation moves forward on time and in the right way.",
+            "International transport and cargo insurance to protect every shipment."
           ]
         )
       }
@@ -1180,8 +1196,8 @@ const pageTranslations = {
     meta: {
       title: text("Pack Gourmet | Grupo DP", "Pack Gourmet | Grupo DP"),
       description: text(
-        "Pack Gourmet desarrolla food solutions y soluciones de envasado para terceros y líneas propias.",
-        "Pack Gourmet develops food solutions and packaging systems for third parties and in-house lines."
+        "Pack Gourmet comercializa máquinas de sellado, envases PET y soluciones de packaging, envasa líquidos y sólidos en latas de PET alimentario y desarrolla productos para terceros y propios.",
+        "Pack Gourmet sells sealing machines, PET containers and packaging solutions, fills liquids and solids in food-grade PET cans, and develops products for third parties and its own brands."
       )
     },
     texts: [
@@ -1189,16 +1205,13 @@ const pageTranslations = {
       { selector: "main > section:nth-of-type(1) .eyebrow", value: text("Unidad de negocio", "Business unit") },
       {
         selector: "main > section:nth-of-type(1) h1",
-        value: text(
-          "Soluciones alimentarias con una nueva presencia.",
-          "Food solutions with a new presence."
-        )
+        value: text("Packaging y soluciones de envasado.", "Packaging and filling solutions.")
       },
       {
         selector: "main > section:nth-of-type(1) .lead",
         value: text(
-          "Pack Gourmet desarrolla soluciones de envasado en recipientes transparentes tipo lata, con cierre seguro y una fuerte vocación por mejorar la presentación del producto.",
-          "Pack Gourmet develops packaging solutions in transparent can-like containers with secure closure and a strong drive to enhance product presentation."
+          "Comercializamos máquinas de sellado, envases PET y soluciones de packaging, y envasamos todo tipo de líquidos y sólidos en latas de PET alimentario.",
+          "We sell sealing machines, PET containers and packaging solutions, and we fill all kinds of liquids and solids in food-grade PET cans."
         )
       },
       { selector: "main > section:nth-of-type(1) .hero-card .quote", value: text("Envasamos ideas.", "We package ideas.") },
@@ -1216,57 +1229,60 @@ const pageTranslations = {
       { selector: "main > section:nth-of-type(2) .eyebrow", value: text("Qué hacemos", "What we do") },
       {
         selector: "main > section:nth-of-type(2) h2",
-        value: text("Conservación, impacto visual y diferenciación.", "Preservation, visual impact and differentiation.")
+        value: text(
+          "Packaging, envasado y desarrollo de productos.",
+          "Packaging, filling and product development."
+        )
       },
       {
-        selector: "main > section:nth-of-type(2) > .container > .split-layout > div:first-child p",
+        selector: "main > section:nth-of-type(2) .split-layout > div:first-child p",
         all: true,
         value: text(
           [
-            "La propuesta se apoya en un recipiente similar a una lata, pero realizado en plástico transparente. El formato permite mostrar el contenido, sellarlo y conservarlo hasta el momento de apertura, generando una experiencia distinta desde el envase.",
-            "Su versatilidad lo vuelve apto para múltiples aplicaciones, tanto en desarrollos para terceros como en líneas propias de producto."
+            "Ofrecemos soluciones de packaging integrales: comercializamos máquinas de sellado y envases PET, y envasamos todo tipo de líquidos y sólidos en latas de PET alimentario.",
+            "También desarrollamos productos para terceros y contamos con nuestra propia línea de productos."
           ],
           [
-            "The proposal is built around a container similar to a can, but made of transparent plastic. The format makes it possible to show the contents, seal them and preserve them until opening, creating a distinct experience from the package itself.",
-            "Its versatility makes it suitable for multiple applications, both in third-party developments and in in-house product lines."
+            "We offer complete packaging solutions: we sell sealing machines and PET containers, and we fill all kinds of liquids and solids in food-grade PET cans.",
+            "We also develop products for third parties and have our own line of products."
           ]
         )
       },
-      { selector: "main > section:nth-of-type(2) .panel h3", value: text("Atributos del formato", "Format attributes") },
+      { selector: "main > section:nth-of-type(2) .panel h3", value: text("Qué ofrecemos", "What we offer") },
       {
         selector: "main > section:nth-of-type(2) .list-clean li",
         all: true,
         value: text(
           [
-            "Alta visibilidad del contenido.",
-            "Cierre seguro y apertura asociada al consumo.",
-            "Aplicación en productos sólidos o líquidos.",
-            "Potencial de exhibición y diferenciación en góndola."
+            "Máquinas de sellado.",
+            "Envases PET.",
+            "Soluciones de packaging.",
+            "Envasado de líquidos y sólidos en latas de PET alimentario."
           ],
           [
-            "High visibility of the contents.",
-            "Secure closure and opening linked to consumption.",
-            "Suitable for solid or liquid products.",
-            "Strong display and shelf-differentiation potential."
+            "Sealing machines.",
+            "PET containers.",
+            "Packaging solutions.",
+            "Filling of liquids and solids in food-grade PET cans."
           ]
         )
       },
       { selector: "main > section:nth-of-type(3) .eyebrow", value: text("Modelos de trabajo", "Ways of working") },
       {
         selector: "main > section:nth-of-type(3) h2",
-        value: text("Dos formas de desarrollar la propuesta.", "Two ways to develop the proposal.")
+        value: text("Dos formas de trabajar con nosotros.", "Two ways to work with us.")
       },
       {
         selector: "main > section:nth-of-type(3) .route-card__label",
         all: true,
-        value: text(["Servicio para terceros", "Desarrollos propios"], ["Third-party service", "In-house developments"])
+        value: text(["Servicio para terceros", "Productos propios"], ["Third-party service", "Own products"])
       },
       {
         selector: "main > section:nth-of-type(3) .route-card h3",
         all: true,
         value: text(
-          ["Traé tu producto y lo envasamos.", "Productos o desarrollos con identidad propia."],
-          ["Bring your product and we package it.", "Products or developments with their own identity."]
+          ["Desarrollo de productos para terceros.", "Agua four pack y traguitos para eventos."],
+          ["Product development for third parties.", "Four-pack water and shots for events."]
         )
       },
       {
@@ -1274,26 +1290,38 @@ const pageTranslations = {
         all: true,
         value: text(
           [
-            "Una modalidad orientada a empresas que ya cuentan con su producto y buscan un sistema de packaging más atractivo, funcional y diferenciado.",
-            "Una línea pensada para crear productos propios donde el envase también forme parte de la propuesta comercial y del posicionamiento."
+            "Desarrollamos productos para terceros y envasamos todo tipo de líquidos y sólidos en latas de PET alimentario.",
+            "Una línea propia de productos: agua four pack y traguitos preparados para eventos."
           ],
           [
-            "A model aimed at companies that already have a product and are looking for a more attractive, functional and differentiated packaging system.",
-            "A line created to build in-house products where the package is also part of the commercial proposal and the positioning."
+            "We develop products for third parties and fill all kinds of liquids and solids in food-grade PET cans.",
+            "Our own product line: four-pack water and ready-made shots for events."
           ]
         )
       },
       { selector: "main > section:nth-of-type(4) .eyebrow", value: text("Capacidades", "Capabilities") },
       {
         selector: "main > section:nth-of-type(4) h2",
-        value: text("Packaging, presentación y desarrollo comercial.", "Packaging, presentation and commercial development.")
+        value: text("Packaging, envasado y desarrollo.", "Packaging, filling and development.")
       },
       {
         selector: "main > section:nth-of-type(4) .service-grid h3",
         all: true,
         value: text(
-          ["Envasado para terceros", "Recipientes y tapas", "Soluciones para exhibición", "Soluciones alimentarias", "Líneas propias"],
-          ["Third-party packaging", "Containers and lids", "Display solutions", "Food solutions", "In-house lines"]
+          [
+            "Máquinas de sellado",
+            "Envases PET",
+            "Soluciones de packaging",
+            "Envasado en latas de PET alimentario",
+            "Desarrollo para terceros"
+          ],
+          [
+            "Sealing machines",
+            "PET containers",
+            "Packaging solutions",
+            "Filling in food-grade PET cans",
+            "Development for third parties"
+          ]
         )
       },
       {
@@ -1301,38 +1329,37 @@ const pageTranslations = {
         all: true,
         value: text(
           [
-            "Servicio B2B para empresas que quieren transformar la manera en que presentan su producto.",
-            "Opciones de formato para adaptar el sistema de cierre al contenido y al uso.",
-            "Desarrollo de exhibidores y soportes que acompañan el posicionamiento del producto.",
-            "Una mirada amplia sobre el producto, su conservación y su experiencia de consumo.",
-            "Construcción de identidad para productos desarrollados dentro de la unidad."
+            "Comercialización de máquinas de sellado.",
+            "Comercialización de envases PET.",
+            "Soluciones de packaging para distintos productos.",
+            "Envasamos todo tipo de líquidos y sólidos.",
+            "Desarrollo de productos para terceros."
           ],
           [
-            "A B2B service for companies that want to transform how they present their product.",
-            "Format options to adapt the closure system to the content and its use.",
-            "Development of displays and supports that reinforce the product's positioning.",
-            "A broad view of the product, its preservation and its consumption experience.",
-            "Identity building for products developed within the unit."
+            "Sales of sealing machines.",
+            "Sales of PET containers.",
+            "Packaging solutions for different products.",
+            "We fill all kinds of liquids and solids.",
+            "Product development for third parties."
           ]
         )
       },
-      { selector: "main > section:nth-of-type(5) .eyebrow", value: text("Desarrollos", "Developments") },
+      { selector: "main > section:nth-of-type(5) .eyebrow", value: text("Productos propios", "Own products") },
       {
         selector: "main > section:nth-of-type(5) h2",
-        value: text("Primeras líneas de la propuesta.", "First lines of the proposal.")
+        value: text("Nuestra línea de productos.", "Our product line.")
+      },
+      {
+        selector: "main > section:nth-of-type(5) .card-grid h3",
+        all: true,
+        value: text(["Agua four pack", "Traguitos para eventos"], ["Four-pack water", "Shots for events"])
       },
       {
         selector: "main > section:nth-of-type(5) .card-grid p",
         all: true,
         value: text(
-          [
-            "Una línea preparada para construirse desde el envase, la identidad y la experiencia del producto.",
-            "Un desarrollo con perfil funcional, pensado para una presentación distintiva y contemporánea."
-          ],
-          [
-            "A line prepared to be built from the package, the identity and the product experience.",
-            "A functional development designed for a distinctive and contemporary presentation."
-          ]
+          ["Agua envasada en formato four pack.", "Traguitos preparados, pensados para eventos."],
+          ["Bottled water in a four-pack format.", "Ready-made shots designed for events."]
         )
       },
       {
@@ -1349,8 +1376,8 @@ const pageTranslations = {
     meta: {
       title: text("Efectivo 365 | Grupo DP", "Efectivo 365 | Grupo DP"),
       description: text(
-        "Efectivo 365 desarrolla soluciones para cajeros automáticos extra bancarios, con comercialización, instalación, mantenimiento y operación.",
-        "Efectivo 365 develops solutions for off-bank ATMs, including commercialization, installation, maintenance and operation."
+        "Efectivo 365 cuenta con una red propia de ATM en estaciones de servicio y puntos estratégicos de todo el país, administra redes de terceros y desarrolla billeteras virtuales, con más de 30 años de experiencia.",
+        "Efectivo 365 operates its own ATM network at service stations and strategic points across the country, manages third-party networks and develops digital wallets, with over 30 years of experience."
       )
     },
     texts: [
@@ -1358,24 +1385,21 @@ const pageTranslations = {
       { selector: "main > section:nth-of-type(1) .eyebrow", value: text("Unidad de negocio", "Business unit") },
       {
         selector: "main > section:nth-of-type(1) h1",
-        value: text(
-          "Cajeros automáticos para entornos extra bancarios.",
-          "ATMs for off-bank environments."
-        )
+        value: text("Una red de ATM en todo el país.", "An ATM network across the country.")
       },
       {
         selector: "main > section:nth-of-type(1) .lead",
         value: text(
-          "Efectivo 365 reúne comercialización, instalación, mantenimiento y operación de cajeros automáticos para ampliar disponibilidad de servicio en distintos contextos.",
-          "Efectivo 365 brings together commercialization, installation, maintenance and ATM operation to expand service availability in different contexts."
+          "Contamos con una red propia de ATM en estaciones de servicio y puntos estratégicos distribuidos en todo el país, y brindamos servicios integrales del mundo ATM con más de 30 años de experiencia.",
+          "We run our own ATM network at service stations and strategic points across the country, and provide end-to-end ATM services with over 30 years of experience."
         )
       },
       {
         selector: "main > section:nth-of-type(1) .tag",
         all: true,
         value: text(
-          ["Compra y consignación", "Instalación", "Mantenimiento", "Software y logística"],
-          ["Purchase and consignment", "Installation", "Maintenance", "Software and logistics"]
+          ["Red propia de ATM", "Redes de terceros", "Más de 30 años", "Billeteras virtuales"],
+          ["Own ATM network", "Third-party networks", "30+ years", "Digital wallets"]
         )
       },
       {
@@ -1389,19 +1413,19 @@ const pageTranslations = {
       { selector: "main > section:nth-of-type(2) .eyebrow", value: text("Qué hacemos", "What we do") },
       {
         selector: "main > section:nth-of-type(2) h2",
-        value: text("Equipos y operación dentro de una misma propuesta.", "Equipment and operations within one proposal.")
+        value: text("Más de 30 años en el mundo ATM.", "Over 30 years in the ATM world.")
       },
       {
-        selector: "main > section:nth-of-type(2) > .container > .split-layout > div:first-child p",
+        selector: "main > section:nth-of-type(2) .split-layout > div:first-child p",
         all: true,
         value: text(
           [
-            "La unidad está orientada al desarrollo de soluciones de autoservicio que necesitan algo más que el equipo: necesitan instalación, monitoreo, mantenimiento y continuidad.",
-            "Ese enfoque integral permite pensar al cajero automático como parte de una red de servicio, y no solo como una pieza aislada."
+            "Operamos una red propia de ATM ubicada en estaciones de servicio y en puntos estratégicos de todo el país.",
+            "Además administramos redes de terceros, brindamos servicios integrales del mundo ATM y desarrollamos billeteras virtuales."
           ],
           [
-            "The unit is focused on developing self-service solutions that need more than the hardware itself: they need installation, monitoring, maintenance and continuity.",
-            "That integrated approach makes it possible to think of the ATM as part of a service network, not merely as an isolated piece of equipment."
+            "We operate our own ATM network, located at service stations and strategic points across the country.",
+            "We also manage third-party networks, provide end-to-end ATM services and develop digital wallets."
           ]
         )
       },
@@ -1411,30 +1435,30 @@ const pageTranslations = {
         all: true,
         value: text(
           [
-            "Compra, venta y consignación de equipos.",
-            "Instalación y puesta en marcha.",
-            "Soporte técnico, software y mantenimiento.",
-            "Logística y operación de red."
+            "Red propia de ATM en estaciones de servicio y puntos estratégicos.",
+            "Administración de redes de terceros.",
+            "Servicios integrales del mundo ATM.",
+            "Desarrollo de billeteras virtuales."
           ],
           [
-            "Purchase, sale and consignment of equipment.",
-            "Installation and commissioning.",
-            "Technical support, software and maintenance.",
-            "Logistics and network operation."
+            "Own ATM network at service stations and strategic points.",
+            "Management of third-party networks.",
+            "End-to-end ATM services.",
+            "Development of digital wallets."
           ]
         )
       },
       { selector: "main > section:nth-of-type(3) .eyebrow", value: text("Servicios", "Services") },
       {
         selector: "main > section:nth-of-type(3) h2",
-        value: text("Una estructura pensada para sostener el servicio.", "A structure designed to sustain the service.")
+        value: text("Una estructura para sostener el servicio.", "A structure to sustain the service.")
       },
       {
         selector: "main > section:nth-of-type(3) .service-grid h3",
         all: true,
         value: text(
-          ["Comercialización", "Instalación", "Mantenimiento", "Software y monitoreo", "Logística y reposición", "Operación integral"],
-          ["Commercialization", "Installation", "Maintenance", "Software and monitoring", "Logistics and replenishment", "End-to-end operation"]
+          ["Red propia de ATM", "Administración de redes de terceros", "Servicios integrales ATM", "Billeteras virtuales"],
+          ["Own ATM network", "Third-party network management", "End-to-end ATM services", "Digital wallets"]
         )
       },
       {
@@ -1442,20 +1466,16 @@ const pageTranslations = {
         all: true,
         value: text(
           [
-            "Compra, venta y consignación de cajeros automáticos según necesidad operativa.",
-            "Montaje y puesta en marcha con foco en operatividad y confiabilidad.",
-            "Soporte preventivo y correctivo para asegurar continuidad del servicio.",
-            "Herramientas para seguimiento, control y gestión de la operación.",
-            "Coordinación de los recursos necesarios para que la red siga funcionando.",
-            "Una mirada completa sobre el servicio, desde el equipo hasta su desempeño en campo."
+            "Cajeros en estaciones de servicio y puntos estratégicos distribuidos en todo el país.",
+            "Gestionamos redes de ATM de otras empresas.",
+            "Más de 30 años de experiencia en el mundo ATM.",
+            "Desarrollo de billeteras virtuales."
           ],
           [
-            "Purchase, sale and consignment of ATMs according to operational need.",
-            "Assembly and commissioning focused on operability and reliability.",
-            "Preventive and corrective support to ensure service continuity.",
-            "Tools for tracking, control and operation management.",
-            "Coordination of the resources required to keep the network running.",
-            "A complete view of the service, from the unit itself to field performance."
+            "ATMs at service stations and strategic points distributed across the country.",
+            "We manage ATM networks for other companies.",
+            "Over 30 years of experience in the ATM world.",
+            "Development of digital wallets."
           ]
         )
       },
@@ -1491,8 +1511,8 @@ const pageTranslations = {
     meta: {
       title: text("Nautik | Grupo DP", "Nautik | Grupo DP"),
       description: text(
-        "Nautik desarrolla soluciones de diseño y equipamiento para embarcaciones, con una mirada premium sobre el detalle y la funcionalidad.",
-        "Nautik develops design and equipment solutions for vessels, with a premium view of detail and functionality."
+        "Nautik desarrolla y fabrica accesorios para embarcaciones: tableros, nombres con luz, portacápsulas, estantes, puertas, muebles, portabotellas y juegos de mesa. Incluye Power Nautik, torre energética para marinas.",
+        "Nautik develops and manufactures boat accessories: panels, illuminated names, capsule holders, shelves, doors, furniture, bottle holders and board games. Includes Power Nautik, an energy tower for marinas."
       )
     },
     texts: [
@@ -1500,19 +1520,22 @@ const pageTranslations = {
       { selector: "main > section:nth-of-type(1) .eyebrow", value: text("Unidad de negocio", "Business unit") },
       {
         selector: "main > section:nth-of-type(1) h1",
-        value: text("Diseño y equipamiento para embarcaciones.", "Design and equipment for vessels.")
+        value: text("Accesorios para embarcaciones.", "Accessories for boats.")
       },
       {
         selector: "main > section:nth-of-type(1) .lead",
         value: text(
-          "Nautik reúne identidad, restyling y piezas especiales para embarcaciones y espacios vinculados al agua, combinando detalle, funcionalidad y presencia.",
-          "Nautik brings together identity, restyling and special pieces for vessels and water-linked spaces, combining detail, functionality and presence."
+          "Desarrollamos y fabricamos todo tipo de accesorios para embarcaciones, y sumamos Power Nautik, una torre energética para marinas, clubes y amarras privadas.",
+          "We develop and manufacture all kinds of boat accessories, and we offer Power Nautik, an energy tower for marinas, clubs and private moorings."
         )
       },
       {
         selector: "main > section:nth-of-type(1) .tag",
         all: true,
-        value: text(["Restyling", "Identidad náutica", "Piezas especiales", "Marinas"], ["Restyling", "Nautical identity", "Special pieces", "Marinas"])
+        value: text(
+          ["Accesorios náuticos", "Desarrollo y fabricación", "Power Nautik", "Marinas"],
+          ["Nautical accessories", "Development and manufacturing", "Power Nautik", "Marinas"]
+        )
       },
       {
         selector: "main > section:nth-of-type(1) .placeholder-media strong",
@@ -1525,40 +1548,40 @@ const pageTranslations = {
       { selector: "main > section:nth-of-type(2) .eyebrow", value: text("Qué hacemos", "What we do") },
       {
         selector: "main > section:nth-of-type(2) h2",
-        value: text("Detalle, materialidad y experiencia a bordo.", "Detail, materiality and the onboard experience.")
+        value: text("Piezas pensadas para la vida a bordo.", "Pieces designed for life on board.")
       },
       {
-        selector: "main > section:nth-of-type(2) > .container > .split-layout > div:first-child p",
+        selector: "main > section:nth-of-type(2) .split-layout > div:first-child p",
         all: true,
         value: text(
           [
-            "La unidad está pensada para desarrollar soluciones que mejoran la vida a bordo y la percepción del espacio, integrando piezas funcionales con una mirada estética más cuidada.",
-            "El resultado es una propuesta donde diseño y uso conviven de forma natural."
+            "Desarrollamos y fabricamos todo tipo de accesorios para embarcaciones, integrando funcionalidad y una terminación cuidada en cada pieza.",
+            "Nuestra línea incluye tableros, nombres con luz, portacápsulas, estantes, puertas, muebles, portabotellas y juegos de mesa."
           ],
           [
-            "The unit is designed to develop solutions that improve life on board and the perception of space, integrating functional pieces with a more refined aesthetic view.",
-            "The result is a proposal where design and use coexist naturally."
+            "We develop and manufacture all kinds of boat accessories, combining functionality and careful finishing in every piece.",
+            "Our line includes panels, illuminated names, capsule holders, shelves, doors, furniture, bottle holders and board games."
           ]
         )
       },
       {
         selector: "main > section:nth-of-type(2) .quote",
         value: text(
-          "La experiencia náutica también se construye en los materiales, las terminaciónes y la forma en que cada pieza acompaña el uso.",
+          "La experiencia náutica también se construye en los materiales, las terminaciones y la forma en que cada pieza acompaña el uso.",
           "The nautical experience is also built through materials, finishes and the way each piece supports use."
         )
       },
-      { selector: "main > section:nth-of-type(3) .eyebrow", value: text("Capacidades", "Capabilities") },
+      { selector: "main > section:nth-of-type(3) .eyebrow", value: text("Productos", "Products") },
       {
         selector: "main > section:nth-of-type(3) h2",
-        value: text("Equipamiento para distintos momentos a bordo.", "Equipment for different moments on board.")
+        value: text("Accesorios para distintos momentos a bordo.", "Accessories for every moment on board.")
       },
       {
         selector: "main > section:nth-of-type(3) .service-grid h3",
         all: true,
         value: text(
-          ["Identidad para embarcaciones", "Restyling", "Tableros y puertas", "Mesas, divisiones y accesorios", "Cavas exhibidores", "Torre energética para marinas"],
-          ["Identity for boats", "Restyling", "Panels and doors", "Tables, partitions and accessories", "Display wine cellars", "Energy tower for marinas"]
+          ["Tableros", "Nombres con luz", "Puertas y muebles", "Estantes", "Portacápsulas y portabotellas", "Juegos de mesa"],
+          ["Panels", "Illuminated names", "Doors and furniture", "Shelves", "Capsule and bottle holders", "Board games"]
         )
       },
       {
@@ -1566,55 +1589,55 @@ const pageTranslations = {
         all: true,
         value: text(
           [
-            "Aplicaciones visuales y materiales que refuerzan carácter y presencia.",
-            "Actualizaciones estéticas y funcionales para renovar la experiencia de uso.",
-            "Piezas especiales desarrolladas para integrarse con precisión al conjunto.",
-            "Elementos que ordenan, acompañan y elevan la experiencia a bordo.",
-            "Soluciones donde la funcionalidad se combina con una presentación refinada.",
-            "Una pieza multifunción pensada para marinas y desarrollos náuticos de alto nivel."
+            "Tableros para embarcaciones, desarrollados y fabricados por Nautik.",
+            "Nombres iluminados para identificar cada embarcación.",
+            "Puertas y muebles para el equipamiento de a bordo.",
+            "Estantes para ordenar y aprovechar el espacio.",
+            "Accesorios para tener a mano lo que se usa a bordo.",
+            "Juegos de mesa para disfrutar la navegación."
           ],
           [
-            "Visual and material applications that reinforce character and presence.",
-            "Aesthetic and functional updates to renew the experience of use.",
-            "Special pieces developed to integrate precisely with the whole.",
-            "Elements that organize, support and elevate the experience on board.",
-            "Solutions where functionality combines with refined presentation.",
-            "A multifunctional piece designed for marinas and high-end nautical developments."
+            "Panels for boats, developed and manufactured by Nautik.",
+            "Illuminated names to identify each vessel.",
+            "Doors and furniture for on-board outfitting.",
+            "Shelves to organize and make the most of the space.",
+            "Accessories to keep on-board essentials within reach.",
+            "Board games to enjoy life at sea."
           ]
         )
       },
       { selector: "main > section:nth-of-type(4) .eyebrow", value: text("Producto destacado", "Featured product") },
       {
         selector: "main > section:nth-of-type(4) h2",
-        value: text("Torre energética para marinas.", "Energy tower for marinas.")
+        value: text("Power Nautik.", "Power Nautik.")
       },
       {
-        selector: "main > section:nth-of-type(4) > .container > .split-layout > div:first-child p",
+        selector: "main > section:nth-of-type(4) .split-layout > div:first-child p",
         value: text(
-          "Uno de los desarrollos más representativos de la unidad es esta solución para marinas, concebida para integrar funcionalidad, presencia y servicio en un mismo cuerpo.",
-          "One of the unit's most representative developments is this marina solution, conceived to integrate functionality, presence and service into a single body."
+          "Torre energética para marinas, clubes y amarras privadas, construida en acero inoxidable.",
+          "Energy tower for marinas, clubs and private moorings, built in stainless steel."
         )
       },
       {
         selector: "main > section:nth-of-type(4) .spec-grid h3",
         all: true,
-        value: text(["Prestaciones", "Materialidad", "Aplicaciones", "Detalle técnico"], ["Features", "Materiality", "Applications", "Technical detail"])
+        value: text(["Construcción", "Agua", "Tablero", "Tomas"], ["Construction", "Water", "Panel", "Outlets"])
       },
       {
         selector: "main > section:nth-of-type(4) .spec-grid p",
         all: true,
         value: text(
           [
-            "Servicios y funciones integradas según configuración del proyecto.",
-            "Terminaciones y componentes pensados para el entorno náutico.",
-            "Marinas, puertos deportivos y desarrollos premium vinculados al agua.",
-            "Medidas, capacidades e instalación según información final del producto."
+            "Acero inoxidable.",
+            "Canilla FV de acero inoxidable.",
+            "Tablero estanco IP65.",
+            "Tomas de 32 A, toma 220 V, toma USB y toma USB tipo C."
           ],
           [
-            "Integrated services and functions according to project configuration.",
-            "Finishes and components designed for the nautical environment.",
-            "Marinas, yacht harbors and premium developments linked to the water.",
-            "Dimensions, capacities and installation according to the final product information."
+            "Stainless steel.",
+            "Stainless steel FV tap.",
+            "IP65 watertight panel.",
+            "32 A outlets, 220 V outlet, USB outlet and USB type C outlet."
           ]
         )
       },
@@ -1626,20 +1649,20 @@ const pageTranslations = {
       {
         selector: "main > section:nth-of-type(5) .media-grid strong",
         all: true,
-        value: text(["Interiores y cubiertas", "Restyling", "Torre energética"], ["Interiors and decks", "Restyling", "Energy tower"])
+        value: text(["Accesorios a bordo", "Nombres con luz", "Power Nautik"], ["Accessories on board", "Illuminated names", "Power Nautik"])
       },
       {
         selector: "main > section:nth-of-type(5) .media-grid span",
         all: true,
         value: text(
           [
-            "Mesas, puertas, divisiones y accesorios aplicados.",
-            "Proyectos de renovación estética y funcional.",
+            "Tableros, estantes, puertas, muebles y portabotellas aplicados.",
+            "Nombres iluminados instalados en embarcaciones.",
             "Producto, render o video de aplicación en marina."
           ],
           [
-            "Applied tables, doors, partitions and accessories.",
-            "Aesthetic and functional renewal projects.",
+            "Panels, shelves, doors, furniture and bottle holders in use.",
+            "Illuminated names installed on boats.",
             "Product, render or application video in a marina."
           ]
         )
@@ -1650,8 +1673,8 @@ const pageTranslations = {
     meta: {
       title: text("Power Station | Grupo DP", "Power Station | Grupo DP"),
       description: text(
-        "Power Station desarrolla estaciones de carga para celulares pensadas para espacios de alto tránsito.",
-        "Power Station develops cell-phone charging stations designed for high-traffic spaces."
+        "Power Station ofrece soluciones integrales de carga para celulares, tablets y otros dispositivos: torres con locker, cable 3 en 1, enchufe de pared HUB de 6 salidas y desarrollos especiales.",
+        "Power Station offers integrated charging solutions for phones, tablets and other devices: towers with locker, 3-in-1 cable, 6-outlet HUB wall plug and special developments."
       )
     },
     texts: [
@@ -1659,21 +1682,21 @@ const pageTranslations = {
       { selector: "main > section:nth-of-type(1) .eyebrow", value: text("Unidad de negocio", "Business unit") },
       {
         selector: "main > section:nth-of-type(1) h1",
-        value: text("Estaciones de carga para espacios de alto tránsito.", "Charging stations for high-traffic spaces.")
+        value: text("Soluciones integrales de carga.", "Integrated charging solutions.")
       },
       {
         selector: "main > section:nth-of-type(1) .lead",
         value: text(
-          "Power Station se organiza en torno a una solución concreta: una torre de carga para celulares pensada para aportar servicio, presencia y utilidad en contextos de uso intensivo.",
-          "Power Station is built around a concrete solution: a cell-phone charging tower designed to add service, presence and utility in high-use environments."
+          "Ofrecemos soluciones integrales de carga para celulares, tablets y otros dispositivos.",
+          "We offer integrated charging solutions for phones, tablets and other devices."
         )
       },
       {
         selector: "main > section:nth-of-type(1) .tag",
         all: true,
         value: text(
-          ["Producto insignia", "Servicio al usuario", "Espacios de espera", "Aplicación flexible"],
-          ["Flagship product", "User service", "Waiting areas", "Flexible application"]
+          ["Torres con locker", "Cable 3 en 1", "HUB de 6 salidas", "Desarrollos especiales"],
+          ["Towers with locker", "3-in-1 cable", "6-outlet HUB", "Special developments"]
         )
       },
       {
@@ -1687,107 +1710,81 @@ const pageTranslations = {
       { selector: "main > section:nth-of-type(2) .eyebrow", value: text("Qué hacemos", "What we do") },
       {
         selector: "main > section:nth-of-type(2) h2",
-        value: text("Una necesidad cotidiana convertida en solución.", "An everyday need turned into a solution.")
+        value: text("Energía disponible donde se necesita.", "Power available where it is needed.")
       },
       {
-        selector: "main > section:nth-of-type(2) > .container > .split-layout > div:first-child p",
+        selector: "main > section:nth-of-type(2) .split-layout > div:first-child p",
         all: true,
         value: text(
           [
-            "La unidad nace alrededor de un producto capaz de sumar valor inmediato en ferias, locales, ámbitos corporativos o espacios de espera: ofrecer energía disponible donde las personas realmente la necesitan.",
-            "Su potencial está en combinar funcionalidad, diseño y presencia dentro del entorno en el que se instala."
+            "Power Station reúne soluciones de carga pensadas para el uso cotidiano: torres con locker, cable 3 en 1 y enchufe de pared HUB de 6 salidas.",
+            "Además desarrollamos soluciones especiales para cada necesidad."
           ],
           [
-            "The unit was born around a product capable of adding immediate value in fairs, retail spaces, corporate environments or waiting areas: offering available power where people really need it.",
-            "Its potential lies in combining functionality, design and presence within the environment where it is installed."
+            "Power Station brings together charging solutions designed for everyday use: towers with locker, a 3-in-1 cable and a 6-outlet HUB wall plug.",
+            "We also develop special solutions for each need."
           ]
         )
       },
-      { selector: "main > section:nth-of-type(2) .panel h3", value: text("Aplicaciones", "Applications") },
+      { selector: "main > section:nth-of-type(2) .panel h3", value: text("Dispositivos", "Devices") },
       {
         selector: "main > section:nth-of-type(2) .list-clean li",
         all: true,
         value: text(
-          [
-            "Eventos, ferias y congresos.",
-            "Locales comerciales y espacios de permanencia.",
-            "Ámbitos corporativos o institucionales.",
-            "Puntos de contacto con alto flujo de personas."
-          ],
-          [
-            "Events, fairs and conferences.",
-            "Retail locations and stay-oriented spaces.",
-            "Corporate or institutional environments.",
-            "Touchpoints with a high flow of people."
-          ]
+          ["Celulares.", "Tablets.", "Otros dispositivos."],
+          ["Phones.", "Tablets.", "Other devices."]
         )
       },
-      { selector: "main > section:nth-of-type(3) .eyebrow", value: text("Beneficios", "Benefits") },
+      { selector: "main > section:nth-of-type(3) .eyebrow", value: text("Productos", "Products") },
       {
         selector: "main > section:nth-of-type(3) h2",
-        value: text("Servicio visible y alto valor percibido.", "Visible service and high perceived value.")
+        value: text("Línea de productos.", "Product line.")
       },
       {
-        selector: "main > section:nth-of-type(3) .card-grid h3",
+        selector: "main > section:nth-of-type(3) .split-layout > div:first-child p",
+        value: text(
+          "Una línea de soluciones de carga para distintos usos y espacios.",
+          "A line of charging solutions for different uses and spaces."
+        )
+      },
+      {
+        selector: "main > section:nth-of-type(3) .spec-grid h3",
         all: true,
-        value: text(["Servicio", "Presencia", "Proyección"], ["Service", "Presence", "Projection"])
+        value: text(
+          ["Torres con locker", "Cable 3 en 1", "Enchufe HUB de 6 salidas", "Desarrollos especiales"],
+          ["Towers with locker", "3-in-1 cable", "6-outlet HUB plug", "Special developments"]
+        )
       },
       {
-        selector: "main > section:nth-of-type(3) .card-grid p",
+        selector: "main > section:nth-of-type(3) .spec-grid p",
         all: true,
         value: text(
           [
-            "Aporta una utilidad concreta que mejora la experiencia del usuario dentro del espacio.",
-            "Se integra como pieza funcional y, al mismo tiempo, como elemento visible del entorno.",
-            "La unidad queda abierta a futuras extensiones de línea o aplicaciones complementarias."
+            "Torres de carga con locker para celulares, tablets y otros dispositivos.",
+            "Un solo cable para cargar distintos dispositivos.",
+            "Enchufe de pared con 6 salidas para cargar varios equipos a la vez.",
+            "Soluciones de carga desarrolladas según cada proyecto."
           ],
           [
-            "It adds a concrete utility that improves the user's experience within the space.",
-            "It integrates as a functional piece and, at the same time, as a visible element within the environment.",
-            "The unit remains open to future line extensions or complementary applications."
+            "Charging towers with locker for phones, tablets and other devices.",
+            "A single cable to charge different devices.",
+            "Wall plug with 6 outlets to charge several devices at once.",
+            "Charging solutions developed for each project."
           ]
         )
       },
-      { selector: "main > section:nth-of-type(4) .eyebrow", value: text("Ficha técnica", "Technical sheet") },
+      { selector: "main > section:nth-of-type(4) .eyebrow", value: text("Imágenes", "Imagery") },
       {
         selector: "main > section:nth-of-type(4) h2",
-        value: text("Un producto con perfil técnico propio.", "A product with its own technical profile.")
-      },
-      {
-        selector: "main > section:nth-of-type(4) .spec-grid h3",
-        all: true,
-        value: text(["Dimensiones", "Conectividad", "Materiales", "Instalación"], ["Dimensions", "Connectivity", "Materials", "Installation"])
-      },
-      {
-        selector: "main > section:nth-of-type(4) .spec-grid p",
-        all: true,
-        value: text(
-          [
-            "Medidas, peso y formato general del equipo.",
-            "Tipos de conexión, potencia y cantidad de puntos de carga disponibles.",
-            "Estructura, terminaciónes y opciones de personalización.",
-            "Condiciones de uso, anclaje y requerimientos operativos."
-          ],
-          [
-            "Measurements, weight and overall format of the unit.",
-            "Connection types, power and number of available charging points.",
-            "Structure, finishes and customization options.",
-            "Conditions of use, anchoring and operational requirements."
-          ]
-        )
-      },
-      { selector: "main > section:nth-of-type(5) .eyebrow", value: text("Imágenes", "Imagery") },
-      {
-        selector: "main > section:nth-of-type(5) h2",
         value: text("Escenas de uso y vistas del producto.", "Usage scenes and product views.")
       },
       {
-        selector: "main > section:nth-of-type(5) .media-grid strong",
+        selector: "main > section:nth-of-type(4) .media-grid strong",
         all: true,
         value: text(["Producto en contexto", "Vista técnica", "Video de producto"], ["Product in context", "Technical view", "Product video"])
       },
       {
-        selector: "main > section:nth-of-type(5) .media-grid span",
+        selector: "main > section:nth-of-type(4) .media-grid span",
         all: true,
         value: text(
           [
@@ -1799,6 +1796,112 @@ const pageTranslations = {
             "Fair, lobby, store or institutional environment.",
             "Render, front or side view of the unit.",
             "Presentation of use, benefits and presence within the space."
+          ]
+        )
+      }
+    ]
+  },
+  dphome: {
+    meta: {
+      title: text("DP Home | Grupo DP", "DP Home | Grupo DP"),
+      description: text(
+        "DP Home desarrolla arquitectura moderna, refacciones y obras llave en mano, y ofrece una línea de productos propios: mesas de arrime, porta rollos, porta toallas y carritos auxiliares multiuso.",
+        "DP Home develops modern architecture, renovations and turnkey works, and offers its own product line: console tables, roll holders, towel holders and multipurpose utility carts."
+      )
+    },
+    texts: [
+      { selector: "nav.breadcrumbs a", all: true, value: text(["Inicio", "Unidades de negocio"], ["Home", "Business units"]) },
+      { selector: "main > section:nth-of-type(1) .eyebrow", value: text("Unidad de negocio", "Business unit") },
+      {
+        selector: "main > section:nth-of-type(1) h1",
+        value: text("Arquitectura moderna para tu hogar.", "Modern architecture for your home.")
+      },
+      {
+        selector: "main > section:nth-of-type(1) .lead",
+        value: text(
+          "DP Home desarrolla arquitectura moderna, refacciones y obras llave en mano, y suma una línea de productos propios para el hogar.",
+          "DP Home develops modern architecture, renovations and turnkey works, and adds its own line of products for the home."
+        )
+      },
+      {
+        selector: "main > section:nth-of-type(1) .tag",
+        all: true,
+        value: text(
+          ["Arquitectura moderna", "Refacciones", "Obras llave en mano", "Productos propios"],
+          ["Modern architecture", "Renovations", "Turnkey works", "Own products"]
+        )
+      },
+      {
+        selector: "main > section:nth-of-type(1) .placeholder-media strong",
+        value: text("Proyecto o producto DP Home", "DP Home project or product")
+      },
+      {
+        selector: "main > section:nth-of-type(1) .placeholder-media span",
+        value: text("Obra, ambiente o línea de productos propios.", "Project, interior or own product line.")
+      },
+      { selector: "main > section:nth-of-type(2) .eyebrow", value: text("Qué hacemos", "What we do") },
+      {
+        selector: "main > section:nth-of-type(2) h2",
+        value: text("Del proyecto a la obra terminada.", "From project to finished work.")
+      },
+      {
+        selector: "main > section:nth-of-type(2) .split-layout > div:first-child p",
+        all: true,
+        value: text(
+          [
+            "DP Home reúne arquitectura moderna, refacciones y obras llave en mano, con una mirada actual sobre el diseño de los espacios.",
+            "A la vez, desarrolla una línea de productos propios pensados para el hogar."
+          ],
+          [
+            "DP Home brings together modern architecture, renovations and turnkey works, with a contemporary approach to space design.",
+            "It also develops its own line of products designed for the home."
+          ]
+        )
+      },
+      { selector: "main > section:nth-of-type(2) .panel h3", value: text("Servicios", "Services") },
+      {
+        selector: "main > section:nth-of-type(2) .list-clean li",
+        all: true,
+        value: text(
+          ["Arquitectura moderna.", "Refacciones.", "Obras llave en mano."],
+          ["Modern architecture.", "Renovations.", "Turnkey works."]
+        )
+      },
+      { selector: "main > section:nth-of-type(3) .eyebrow", value: text("Productos propios", "Own products") },
+      {
+        selector: "main > section:nth-of-type(3) h2",
+        value: text("Línea de productos DP Home.", "DP Home product line.")
+      },
+      {
+        selector: "main > section:nth-of-type(3) .split-layout > div:first-child p",
+        value: text(
+          "Piezas de diseño propio para equipar y ordenar el hogar.",
+          "In-house designed pieces to furnish and organize the home."
+        )
+      },
+      {
+        selector: "main > section:nth-of-type(3) .spec-grid h3",
+        all: true,
+        value: text(
+          ["Mesas de arrime", "Porta rollos", "Porta toallas", "Carritos auxiliares multiuso"],
+          ["Console tables", "Roll holders", "Towel holders", "Multipurpose utility carts"]
+        )
+      },
+      {
+        selector: "main > section:nth-of-type(3) .spec-grid p",
+        all: true,
+        value: text(
+          [
+            "Mesas de arrime de la línea propia DP Home.",
+            "Porta rollos de la línea propia DP Home.",
+            "Porta toallas de la línea propia DP Home.",
+            "Carritos auxiliares multiuso para distintos ambientes."
+          ],
+          [
+            "Console tables from the DP Home own line.",
+            "Roll holders from the DP Home own line.",
+            "Towel holders from the DP Home own line.",
+            "Multipurpose utility carts for different rooms."
           ]
         )
       }
@@ -2219,9 +2322,9 @@ const renderChrome = () => {
             <span class="footer-title">${ui.footerContact}</span>
             <div class="footer-links">
               <span>${ui.footerLocation}</span>
-              <span>${ui.footerEmail}</span>
-              <span>${ui.footerPhone}</span>
-              <span>${ui.footerHours}</span>
+              <a href="mailto:${ui.footerEmail}">${ui.footerEmail}</a>
+              <a href="tel:+541121212020">${ui.footerPhone}</a>
+              <a href="https://wa.me/5491132188885" target="_blank" rel="noopener">${ui.footerWhatsapp}</a>
               <a href="${href(routes.contacto)}">${ui.footerChannel}</a>
             </div>
           </div>
@@ -2412,7 +2515,7 @@ const renderHomeMarquee = () => {
   }
 
   const tileMarkup = (duplicate = false) =>
-    marqueeBrands
+    brands
       .map((brand) => {
         const tileStyle = brandTileStyle(brand);
         const tagName = brand.path ? "a" : "div";
